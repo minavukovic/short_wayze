@@ -2,15 +2,35 @@
 
 <head>
 	<title>Short Wayze</title>
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/bootstrap-theme.css">
-
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/bootstrap-theme.css">
+	<link rel="stylesheet" href="/css/hamburger.css">
 
 </head>
 
 <body>
-	Begin here (or replace this with any static code already written).
+	<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Top Navigation Menu -->
+	<div class="topnav">
+		<a href="#home" class="active">Logo</a>
+		<!-- Navigation links (hidden by default) -->
+		<div id="myLinks">
+			<a href="#add">Add Shortcut</a>
+			<a href="#report">Report Cops/Construction</a>
+			<a href="#plans">Building Plans</a>
+			<a href=#help>Need Help?</a>
+			<a href=#signout>Sign Out</a>
+		</div>
+		<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+		<a href="javascript:void(0);" class="icon" onclick="hamburgerToggle()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</div> 
+
 	<script src="/js/bootstrap.js"></script>
+	<script src="/js/hamburger.js"></script>
 </body>
 
 </html>
