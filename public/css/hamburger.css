@@ -11,7 +11,7 @@
 
 /* Style navigation menu links */
 .topnav a {
-  color: black;
+  color: orange;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 24px;
@@ -29,7 +29,7 @@
 
 /* Style the active link (or home/logo) */
 .active {
-  background-color: #c4c4c4;
+  background-color: #000000;
   color: black;
   text-align: center;
 }
