@@ -5,7 +5,7 @@
 	<link rel="stylesheet" href="/css/bootstrap.css">
 	<link rel="stylesheet" href="/css/bootstrap-theme.css">
 	<link rel="stylesheet" href="/css/hamburger.css">
-
+	<link rel="stylesheet" href="/css/search.css">
 </head>
 
 <body>
@@ -27,7 +27,13 @@
 		<a href="javascript:void(0);" class="icon" onclick="hamburgerToggle()">
 			<i class="fa fa-bars"></i>
 		</a>
-	</div> 
+	</div>
+	<div>
+		<form class="example" action="/action_page.php">
+			<input type="text" placeholder="Search.." name="search" />
+			<button type="submit"><i class="fa fa-search"></i></button>
+		</form>
+	</div>
 
 	<script src="/js/bootstrap.js"></script>
 	<script src="/js/hamburger.js"></script>
