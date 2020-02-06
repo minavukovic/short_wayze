@@ -11,24 +11,25 @@
 
 /* Style navigation menu links */
 .topnav a {
-  color: white;
+  color: black;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 24px;
   display: block;
 }
 
 /* Style the hamburger menu */
 .topnav a.icon {
-  background: black;
+  background: white;
   display: block;
-  position: absolute;
+  float: left;
   right: 0;
   top: 0;
 }
 
 /* Style the active link (or home/logo) */
 .active {
-  background-color: #4CAF50;
-  color: white;
+  background-color: #c4c4c4;
+  color: black;
+  text-align: center;
 }
