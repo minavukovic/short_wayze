@@ -19,7 +19,7 @@ form.example input[type="text"] {
 form.example button {
   float: left;
   width: 20%;
-  padding: 13.5px;
+  padding: 14.1px;
   background: #2196f3;
   color: white;
   font-size: 17px;
@@ -37,8 +37,7 @@ form.example::after {
   clear: both;
   display: table;
 }
-
-.main-map {
+.main-map img {
   width: 100%;
   height: auto;
 }
