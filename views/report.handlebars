@@ -5,32 +5,36 @@
 	<link rel="stylesheet" href="/css/bootstrap.css">
 	<link rel="stylesheet" href="/css/bootstrap-theme.css">
 	<link rel="stylesheet" href="/css/hamburger.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 	<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script src="/js/bootstrap.js"></script>
+	<script src="/js/hamburger.js"></script>
 
 	<!-- Top Navigation Menu -->
-	<div class="topnav">
-        <a href="/" class="active">ShortWayze</a>
-        <!-- Navigation links (hidden by default) -->
-        <div id="myLinks">
-            <a href="/add/shortcut">Add Shortcut</a>
-            <a href="/add/building-plan">Building Plans</a>
-            <a href="/help">Need Help?</a>
-            <a href="/sign-out">Sign Out</a>
-        </div>
-		<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-		<a href="javascript:void(0);" class="icon" onclick="hamburgerToggle()">
-			<i class="fa fa-bars"></i>
-		</a>
-	</div>
+	<header class="title">
+		<a href="/" style="text-decoration: none;"><h1>SHORT WAYZE</h1></a>
+		<div class="top">
+			<a href="#" class="menu_icon"><i class="fa fa-bars"></i></a>
+		</div>
+	</header>
+	<nav class="menu">
+		<a href="/add/shortcut" class="item_menu">Add Shortcut</a>
+		<a href="/add/report" class="item_menu">Report Cop/Construction</a>
+		<a href="/add/building-plan" class="item_menu">Building Plans</a>
+		<a href="/help" class="item_menu">Need Help?</a>
+		<a href="/sign-out" class="item_menu">Sign Out</a>
+	</nav>
+
 
     <p>TODO : - )</p>
 
-	<script src="/js/bootstrap.js"></script>
-	<script src="/js/hamburger.js"></script>
+	
 </body>
 
 </html>
