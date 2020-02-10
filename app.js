@@ -13,7 +13,6 @@ var shortcut = require('./routes/shortcut');
 var report = require('./routes/report');
 var building_plan = require('./routes/building_plan');
 var help = require('./routes/help');
-var sign_out = require('./routes/sign_out');
 var login = require('./routes/login');
 // Example route
 // var user = require('./routes/user');
@@ -40,12 +39,12 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', index.view);
+app.get('/home', index.view);
 app.get('/add/shortcut', shortcut.view);
 app.get('/add/report', report.view);
 app.get('/add/building-plan', building_plan.view);
 app.get('/help', help.view);
-app.get('/sign-out', sign_out.view);
+app.get('/', login.view);
 app.get('/login', login.view);
 // Example route
 // app.get('/users', user.list);
