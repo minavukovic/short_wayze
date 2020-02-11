@@ -1,0 +1,68 @@
+{
+  "building_plans": [
+    {
+      "location": "CSE Building, Basement",
+      "description": "Computer Science and Engineering Building, Basement",
+      "imageURL": "https://cse.ucsd.edu/sites/cse.ucsd.edu/files/maps/CSE_EBU3_BASEMENT.jpg"
+    },
+    {
+      "location": "CSE Building, Floor 1",
+      "description": "Computer Science and Engineering Building, Floor 1",
+      "imageURL": "https://cse.ucsd.edu/sites/cse.ucsd.edu/files/maps/CSE_EBU3_LEVEL1.jpg"
+    },
+    {
+      "location": "CSE Building, Floor 2",
+      "description": "Computer Science and Engineering Building, Floor 2",
+      "imageURL": "https://cse.ucsd.edu/sites/cse.ucsd.edu/files/maps/CSE_EBU3_LEVEL2.jpg"
+    },
+    {
+      "location": "CSE Building, Floor 3",
+      "description": "Computer Science and Engineering Building, Floor 3",
+      "imageURL": "https://cse.ucsd.edu/sites/cse.ucsd.edu/files/maps/CSE_EBU3_LEVEL3.jpg"
+    },
+    {
+      "location": "CSE Building, Floor 4",
+      "description": "Computer Science and Engineering Building, Floor 4",
+      "imageURL": "https://cse.ucsd.edu/sites/cse.ucsd.edu/files/maps/CSE_EBU3_LEVEL4.jpg"
+    }
+  ],
+  "cops": [
+    {
+      "longitude": 32.876178,
+      "latitude": -117.240780,
+      "unixTime": 1581379800
+    },
+    {
+      "longitude": 32.884916,
+      "latitude": -117.240661,
+      "unixTime": 1581379900
+    }
+  ],
+  "locations": [
+    {
+      "name": "64 Degrees",
+      "longitude": 32.8747808,
+      "latitude": -117.2425759
+    },
+    {
+      "name": "Geisel Library",
+      "longitude": 32.8811751,
+      "latitude": -117.239769
+    },
+    {
+      "name": "Copley International Conference Center",
+      "longitude": 32.8850061,
+      "latitude": -117.2434825
+    },
+    {
+      "name": "Computer Science and Engineering Building",
+      "longitude": 32.8818051,
+      "latitude": -117.2357122
+    },
+    {
+      "name": "Warren Lecture Hall",
+      "longitude": 32.8805336,
+      "latitude": -117.2365006
+    }
+  ]
+}
