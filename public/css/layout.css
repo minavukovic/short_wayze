@@ -13,3 +13,15 @@ img {
   max-width: 100%;
 }
 */
+
+#myModal {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    max-width: ;
+}
+
+#picture {
+	 max-width: 100%;
+    max-height: 100vh;
+    height: auto;
+}

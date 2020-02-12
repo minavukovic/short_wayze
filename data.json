@@ -1,0 +1,12 @@
+{
+	"building_plans": [
+		{
+			"name": "CSE Basement",
+			"imageURL": "https://theconstructor.org/wp-content/uploads/2018/09/Site-house-plan-450x424.jpg"			
+		},
+		{
+			"name": "CSB Building",
+			"imageURL" : "https://theconstructor.org/wp-content/uploads/2018/09/house-plan.jpeg"
+		}
+	]
+}

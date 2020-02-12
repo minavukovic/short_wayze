@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="/css/bootstrap.css">
 	<link rel="stylesheet" href="/css/bootstrap-theme.css">
 	<link rel="stylesheet" href="/css/hamburger.css">
+	<link rel="stylesheet" href="/css/layout.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
@@ -27,14 +28,64 @@
 	<nav class="menu">
 		<a href="/add/shortcut" class="item_menu">Add Shortcut</a>
 		<a href="/add/report" class="item_menu">Report Cop/Construction</a>
-		<a href="/add/building-plan" class="item_menu">Building Plans</a>
+		<a href="/add/building_plan" class="item_menu">Building Plans</a>
 		<a href="/help" class="item_menu">Need Help?</a>
 		<a href="/login" class="item_menu">Sign Out</a>
 	</nav>
 
+	<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="float: right;">Add a building plan</button>
 
-    <p>TODO : - )</p>
+	<h4> List of all the building plans. </h4>
 
+	<!-- Add building plan modal -->
+	<div id="myModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<!-- <h4 class="modal-title">Add a building plan</h4> -->
+				</div>
+				<div class="modal-body">
+					<form id="addBuildingPlan" role="form" method="get" action="/add/building_plan">
+						<h3>Add a building plan</h3>
+						<div class="form-group">
+							<label for="name">Building Name:</label>
+							<input type="text" class="form-control" id="name" placeholder="Building Name" name="name">
+						</div>
+						<div class="form-group">
+							<label for="description">URL:</label>
+							<input type="text" class="form-control" id="planURL" placeholder="URL" name="planURL">
+						</div>
+
+						<input type="submit" id="submitBtn" class="btn btn-default" value="Submit"></input>
+					</form>
+
+
+					<!-- <form id="uploadForm" enctype="multipart/form-data" action="/add/building_plan" method="post">
+						<input type="file" name="avatar" />
+						<input type="submit" value="Upload Image" name="submit">
+					</form>
+ -->
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	{{#each building_plans}}
+	<div class="plans">
+		<img src="{{imageURL}}" class="img-responsive img-rounded" id="picture">
+		<h3 id="plan">
+			<a href="#">{{name}}</a>
+		</h3>
+	</div>
+	{{/each}}
 	
 </body>
 
