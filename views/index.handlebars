@@ -18,6 +18,7 @@
 	<script type="text/javascript" src="js/script.js"></script>
 	<script src="/js/bootstrap.js"></script>
 	<script src="/js/hamburger.js"></script>
+    <script src="/js/search.js"></script>
 
 	<!-- Top Navigation Menu -->
 	<header class="title">
@@ -35,13 +36,21 @@
 	</nav>
 
 	<!-- Search -->
-	<div class="flex-container">
-		<form class="example" action="/action_page.php">
-			<input type="text" placeholder="Search.." name="search" />
-			<button type="submit"><i class="fa fa-search"></i></button>
-		</form>
-	</div>
-	<div class="main-map">
+    <div class="search_dropdown_btn">
+        <button onclick="searchDestination()" class="dropbtn">Search for your Destination here!</button>
+        <div id="search_dropdown" class="search_dropdown-content">
+            <input type="text" placeholder="Search Here..." id="loc_input" onkeyup="filterDestination()">
+            {{#each locations}}
+             <a href="#">{{name}}</a>
+            {{/each}}
+            <a href="#64-Degrees">64 Degrees</a>
+            <a href="#CSE-Building">Computer Science and Engineering Building</a>
+            <a href="#CICC">Copley International Conference Center</a>
+            <a href="#Geisel">Geisel Library</a>
+            <a href="#WLH">Warren Lecture Hall</a>
+        </div>
+    </div>
+    <div class="main-map">
 		<img src="/images/Main-map.PNG" alt="Main map">
 	</div>
 
