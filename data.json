@@ -18,12 +18,12 @@
     {
       "name": "CSE Building, Floor 3",
       "description": "Computer Science and Engineering Building, Floor 3",
-      "imageURL": "https://cse.ucsd.edu/sites/cse.ucsd.edu/files/maps/CSE_EBU3_LEVEL3.jpg"
+      "imageURL": "https://cse.ucsd.edu/sites/cse.ucsd.edu/files/maps/CSE_LEVEL3.jpg"
     },
     {
       "name": "CSE Building, Floor 4",
       "description": "Computer Science and Engineering Building, Floor 4",
-      "imageURL": "https://cse.ucsd.edu/sites/cse.ucsd.edu/files/maps/CSE_EBU3_LEVEL4.jpg"
+      "imageURL": "https://cse.ucsd.edu/sites/cse.ucsd.edu/files/maps/CSE_LEVEL4.jpg"
     }
   ],
   "cops": [

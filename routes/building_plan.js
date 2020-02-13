@@ -7,10 +7,12 @@ var data = require("../data.json");
 
 exports.addBuildingPlan = function(req, res) {    
 	var name = req.query.name;
+	var description = req.query.description;
 	var imageURL = req.query.planURL;
 
 	var newPlan = 
 		{ 	"name": name, 
+			"description": description,
 			"imageURL": imageURL
 		};
 
