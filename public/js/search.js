@@ -5,7 +5,8 @@ function searchDestination() {
 }
 
 function filterDestination() {
-    var input, filter, ul, li, a, i;
+    console.log(document);
+    var input, filter, a, i;
     input = document.getElementById("loc_input");
     filter = input.value.toUpperCase();
     div = document.getElementById("search_dropdown");
