@@ -17,6 +17,8 @@
  -->	<script src="/js/bootstrap.js"></script>
 	<script src="/js/hamburger.js"></script>
 	<script src="/js/help.js"></script>
+	<script src="https://code.jquery.com/jquery.js"></script>
+
 
 
 	<!-- Top Navigation Menu -->
@@ -35,18 +37,20 @@
 	</nav>
 
 
-
+<div class="container">
     <h1> FAQ </h1>
 
     {{#each faq}}
 		<div class="question" id="{{id}}">
 			<div class="q">
-				<h2><a href="#">{{id}}. {{question}}</a></h2>
+				<h2><a href="#">{{question}}</a></h2>
 			</div>
 			<div class="details"></div>
 
 		</div>
 	{{/each}}
+
+</div>
 	
 
 

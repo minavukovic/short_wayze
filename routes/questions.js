@@ -3,7 +3,7 @@ var questions = require("../questions.json");
 exports.questionInfo = function(request, response) { 
 	var questionID = request.params.number;
 	if (questionID == "random") {
-		questionID = Math.floor(Math.random() * projects.length) + 1;
+		questionID = Math.floor(Math.random() * questions.length) + 1;
 	} else {
 		questionID = parseInt(questionID);
 	}
