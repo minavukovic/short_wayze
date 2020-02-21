@@ -32,6 +32,7 @@
     <script>
         if (window.location.href.charAt(window.location.href.length - 1) === "?") {
             $('#top_title').text("Invalid Login. Please try again, or just use Facebook : - )");
+            $('#bottom_title').hide();
         }
         else {
             $('#top_title').text("Sign In");
