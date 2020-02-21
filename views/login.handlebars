@@ -8,23 +8,24 @@
     <link rel="stylesheet" href="css/login.css">
     {{>facebook}}
     <script src="/js/facebook.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
     <title>Sign in</title>
 
 </head>
 
 <body>
     <div class="main">
-        <p class="sign">Sign in</p>
+        <p class="intro_title">Sign in</p>
         <form class="form1">
             <input class="un " type="text" align="center" placeholder="Username">
             <input class="pass" type="password" align="center" placeholder="Password">
 
-            <button class="submit" formaction="/nav">Sign in</button>
-            <p class="facebookLogin">
+            <button class="submit" formaction="/nav" id="enter">Sign in</button>
+            <p class="facebookLogin" align="center">
                 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
                 </fb:login-button>
             </p>
-            <p class="forgot" align="center"><a href="/nav">Forgot Password?</a></p>
+<!--            <p class="forgot" align="center"><a href="/nav">Forgot Password?</a></p>-->
         </form>
     </div>
 
