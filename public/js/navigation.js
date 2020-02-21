@@ -2,6 +2,8 @@ function get_image_origin() {
     var imgHTML, origin;
     origin = window.location.search.substr(1).split("=")[1];
     imgHTML = '<img id=map_image src="/images/' + origin + '_map.png">';
+    console.log(origin);
+    console.log(imgHTML);
     $('#map_img_container').html(imgHTML);
 }
 function get_image_end() {
