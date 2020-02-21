@@ -1,0 +1,12 @@
+[
+	{
+		"id": "1",
+      	"question": "Does the building plan image I add have to be a URL?",
+      	"answer": "Yes, currently we only accept URLs for building plans. One easy way to do this if you have an image to share not from the web is by uploading it to Google Drive, and sharing the link."
+	},
+	{
+		"id": "2",
+		"question": "Can I only report cops or construction on campus?",
+		"answer": "Yes, unfortunately we currently only support reporting these two features."
+	}
+]
