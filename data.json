@@ -29,7 +29,7 @@
   "cops": [
     {
       "longitude": 32.876178,
-      "latitude": -117.240780,
+      "latitude": -117.24078,
       "unixTime": 1581379800
     },
     {
@@ -63,6 +63,16 @@
       "name": "Warren Lecture Hall",
       "longitude": 32.8805336,
       "latitude": -117.2365006
+    }
+  ],
+  "police": [
+    {
+      "location": "Warren Lecture Hall",
+      "time": "11 am"
+    },
+    {
+      "location": "Giesel",
+      "time": "2 pm"
     }
   ]
 }

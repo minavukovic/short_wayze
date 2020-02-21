@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="/css/bootstrap.css">
 	<link rel="stylesheet" href="/css/bootstrap-theme.css">
 	<link rel="stylesheet" href="/css/hamburger.css">
+	<link rel="stylesheet" href="/css/report.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -15,10 +16,13 @@
 	<script type="text/javascript" src="js/script.js"></script>
 	<script src="/js/bootstrap.js"></script>
 	<script src="/js/hamburger.js"></script>
+	<script src="/js/report.js"></script>
 
 	<!-- Top Navigation Menu -->
 	<header class="title">
-		<a href="/home" style="text-decoration: none;"><h1>SHORT WAYZE</h1></a>
+		<a href="/home" style="text-decoration: none;">
+			<h1>SHORT WAYZE</h1>
+		</a>
 		<div class="top">
 			<a href="#" class="menu_icon"><i class="fa fa-bars"></i></a>
 		</div>
@@ -31,10 +35,43 @@
 		<a href="/login" class="item_menu">Sign Out</a>
 	</nav>
 
+	<!--Trigger-->
+	<a class="login-trigger" href="#" data-target="#login" data-toggle="modal">Report</a>
 
-    <p>TODO : - )</p>
+	<label id="login" class="modal fade" role="dialog">
+		<label class="modal-dialog">
 
-	
+			<label class="modal-content">
+				<label class="modal-body">
+					<button data-dismiss="modal" class="close">&times;</button>
+
+					<h3>Report a Cop</h3>
+					<form id="addCop">
+						<div class="form-group">
+							<label for="name">Name:</label>
+							<input type="text" class="form-control" id="name" placeholder="Name" name="name">
+						</div>
+						<div class="form-group">
+							<label for="description">Description:</label>
+							<input type="text" class="form-control" id="description" placeholder="Description" name="y">
+						</div>
+						<input type="submit" id="submit-Btn" class="btn btn-default" value="Report Cop"></input>
+					</form>
+					</input>
+				</label>
+			</label>
+		</label>
+	</label>
+
+	<h1>Recent Reports</h1>
+
+	{{#each police}}
+	<div class="report">
+		<p id="location" style="font-weight: bold;">{{location}} </p>
+		<p id="time">{{time}}</p>
+	</div>
+	{{/each}}
+
 </body>
 
 </html>
