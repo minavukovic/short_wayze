@@ -22,33 +22,37 @@
     <script src="/js/search.js"></script>
 	<!-- Top Navigation Menu -->
 	<header class="title">
-		<a href="/home" style="text-decoration: none;"><h1>SHORT WAYZE</h1></a>
+		<a href="/nav" style="text-decoration: none;"><h1>SHORT WAYZE</h1></a>
 		<div class="top">
-			<a href="#" class="menu_icon"><i class="fa fa-bars"></i></a>
+			<a class="menu_icon"><i class="fa fa-bars"></i></a>
 		</div>
     </header>
-	<nav class="menu">
-		<a href="/add/shortcut" class="item_menu">Add Shortcut</a>
-		<a href="/add/report" class="item_menu">Report Cop/Construction</a>
-		<a href="/add/building_plan" class="item_menu">Building Plans</a>
-		<a href="/help" class="item_menu">Need Help?</a>
-		<a href="/login" class="item_menu">Sign Out</a>
-	</nav>
+    <nav class="menu" id="nav_menu">
+        {{#each routes}}
+            <a href="{{route}}" class="item-menu" id="nav_item_{{route}}">{{label}}</a>
+        {{/each}}
+    </nav>
 
-    <div class="main-map">
-        <img alt="Main map" id="map_image" src="">
+    <br>
+    <div class="edit_buttons">
+        <button type="button" class="btn btn-dark" onclick="window.location.href='/nav'">Return Home Once You Arrive</button>
+    </div>
+    <br>
+    <div class="main-map" id="map_img_container">
 	</div>
     <script>
         function get_image() {
-            var img = document.getElementById("map_image");
-            var origin = window.location.search.substr(1).split("?")[0].split("=")[1];
-            var end = window.location.search.substr(1).split("?")[1].split("=")[1];
-            console.log(origin);
-            console.log(end);
-            img.src = "/images/" + origin + "_" + end + "_map.png";
+            var imgHTML, origin, end;
+            origin = window.location.search.substr(1).split("&")[0].split("=")[1];
+            end = window.location.search.substr(1).split("&")[1].split("=")[1];
+            imgHTML = '<img id=map_image src="/images/' + origin + '_' + end + '_map.png">';
+            console.log(imgHTML);
+            $('#map_img_container').html(imgHTML);
         }
         get_image();
     </script>
+    <script src="/js/navigation.js"></script>
+    <script>get_image_end();</script>
 
 
 </body>

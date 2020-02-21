@@ -41,7 +41,6 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/home', index.view);
 app.get('/nav', index.view);
 app.get('/add/shortcut', shortcut.view);
 app.get('/add/report', report.view);

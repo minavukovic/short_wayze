@@ -69,5 +69,27 @@
       "longitude": 32.8805336,
       "latitude": -117.2365006
     }
+  ],
+  "routes": [
+    {
+      "name": "navigation",
+      "route": "/nav",
+      "label": "Start your Navigation Route"
+    },
+    {
+      "name": "report",
+      "route": "/add/report",
+      "label": "Report Cop/Construction"
+    },
+    {
+      "name": "building_plan",
+      "route": "/add/building_plan",
+      "label": "View/Add Building Plans"
+    },
+    {
+      "name": "logout",
+      "route": "/login",
+      "label": "Sign Out"
+    }
   ]
 }
