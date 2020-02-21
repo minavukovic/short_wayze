@@ -22,12 +22,8 @@ function statusChangeCallback(response) {
 function changeUser(response) {
     // Hides p element
     $("p.facebookLogin").hide();
-    $("p.intro_title").text("Welcome " + response.name + "!");
+    $("#top_title").text("Welcome " + response.name + "!");
     $("input").hide();
     $("#enter").text("Enter Here!");
     $(".submit").attr('formaction', '/nav');
-}
-
-function invalid() {
-    $('.intro_title').text("Invalid Login. Please try again, or just use Facebook : - )");
 }
