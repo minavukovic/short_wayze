@@ -26,4 +26,5 @@ function changeUser(response) {
     $("input").hide();
     $("#enter").text("Enter Here!");
     $(".submit").attr('formaction', '/nav');
+    $('#bottom_title').show();
 }
