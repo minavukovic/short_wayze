@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -22,28 +21,27 @@ var directions = require('./routes/direction');
 var app = express();
 
 // all environments
-app.set('port', process.env.PORT || 3000);
-app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', handlebars());
-app.set('view engine', 'handlebars');
+app.set("port", process.env.PORT || 3000);
+app.set("views", path.join(__dirname, "views"));
+app.engine("handlebars", handlebars());
+app.set("view engine", "handlebars");
 app.use(express.favicon());
-app.use(express.logger('dev'));
+app.use(express.logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
-app.use(express.cookieParser('IxD secret key'));
+app.use(express.cookieParser("IxD secret key"));
 app.use(express.session());
 app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 
 // development only
-if ('development' == app.get('env')) {
+if ("development" == app.get("env")) {
   app.use(express.errorHandler());
 }
 
 app.get('/nav', index.view);
 app.get('/add/shortcut', shortcut.view);
-app.get('/add/report', report.view);
 // app.get('/add/building_plan', building_plan.view);
 app.get('/add/building_plan', building_plan.addBuildingPlan);
 app.get('/help', help.view);
@@ -52,10 +50,10 @@ app.get('/login', login.view);
 app.get('/nav/start', start.view);
 app.get('/nav/directions', directions.view);
 
-
+app.get("/add/report", report.addEvent);
 // Example route
 // app.get('/users', user.list);
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+http.createServer(app).listen(app.get("port"), function () {
+  console.log("Express server listening on port " + app.get("port"));
 });

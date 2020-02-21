@@ -26,18 +26,6 @@
       "imageURL": "https://cse.ucsd.edu/sites/cse.ucsd.edu/files/maps/CSE_LEVEL4.jpg"
     }
   ],
-  "cops": [
-    {
-      "longitude": 32.876178,
-      "latitude": -117.240780,
-      "unixTime": 1581379800
-    },
-    {
-      "longitude": 32.884916,
-      "latitude": -117.240661,
-      "unixTime": 1581379900
-    }
-  ],
   "locations": [
     {
       "name": "64 Degrees",
@@ -90,6 +78,26 @@
       "name": "logout",
       "route": "/login",
       "label": "Sign Out"
+    }
+  ],
+  "police": [
+    {
+      "location": "Library Walk (Next to the Arcade)",
+      "time": "11AM"
+    },
+    {
+      "location": "Ridge Walk (Between Revelle and Muir)",
+      "time": "2PM"
+    }
+  ],
+  "construction": [
+    {
+      "location": "Muir Parking Lot : - (",
+      "time": "Forever and ever..."
+    },
+    {
+      "location": "Geisel 2nd floor",
+      "time": "12AM"
     }
   ]
 }

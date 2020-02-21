@@ -21,7 +21,9 @@
 
 	<!-- Top Navigation Menu -->
 	<header class="title">
-		<a href="/nav" style="text-decoration: none;"><h1>SHORT WAYZE</h1></a>
+		<a href="/nav" style="text-decoration: none;">
+            <h1>SHORT WAYZE</h1>
+        </a>
 		<div class="top">
 			<a class="menu_icon"><i class="fa fa-bars"></i></a>
 		</div>
@@ -32,7 +34,7 @@
         {{/each}}
     </nav>
 
-<!-- Dropdown to add start and end location for adding shortcut-->
+	<!-- Dropdown to add start and end location for adding shortcut-->
 	<div class="middle_area">
 		<div id="myNav" class="overlay">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -51,19 +53,20 @@
 		</div>
     </div>
 
-	<div class="middle_area">
-		<img src="/images/shortcut_map.png" alt="Static map" class="map">
-		</br>
-		<div class="edit_buttons">
-			<button type="button" class="btn btn-dark">Start/Stop</button>
-			<button type="button" class="btn btn-dark">Undo</button>
-			<button type="button" class="btn btn-dark">Clear</button>
-			<button type="button" class="btn btn-dark">Done</button>
+		<div class="middle_area">
+			<img src="/images/shortcut_map.png" alt="Static map" class="map">
+			</br>
+			<div class="edit_buttons">
+				<button type="button" class="btn btn-dark">Start/Stop</button>
+				<button type="button" class="btn btn-dark">Undo</button>
+				<button type="button" class="btn btn-dark">Clear</button>
+				<button type="button" class="btn btn-dark">Done</button>
+			</div>
 		</div>
 	</div>
     <script src="/js/navigation.js"></script>
 
-	
+
 </body>
 
 </html>
