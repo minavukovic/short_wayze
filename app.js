@@ -14,6 +14,8 @@ var report = require('./routes/report');
 var building_plan = require('./routes/building_plan');
 var help = require('./routes/help');
 var login = require('./routes/login');
+var questions = require('./routes/questions');
+
 // Example route
 // var user = require('./routes/user');
 
@@ -40,13 +42,15 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/home', index.view);
-app.get('/add/shortcut', shortcut.view);
+// app.get('/add/shortcut', shortcut.view);
+app.get('/add/shortcut', shortcut.addShortcut);
 app.get('/add/report', report.view);
 // app.get('/add/building_plan', building_plan.view);
 app.get('/add/building_plan', building_plan.addBuildingPlan);
 app.get('/help', help.view);
 app.get('/', login.view);
 app.get('/login', login.view);
+app.get('/question/:number', questions.questionInfo);
 
 
 // Example route

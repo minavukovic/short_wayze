@@ -3,28 +3,14 @@
     {
       "name": "CSE Building, Basement",
       "description": "Computer Science and Engineering Building, Basement",
-      "imageURL": "https://cse.ucsd.edu/sites/cse.ucsd.edu/files/maps/CSE_EBU3_BASEMENT.jpg"
+      "planURL": "https://cse.ucsd.edu/sites/cse.ucsd.edu/files/maps/CSE_EBU3_BASEMENT.jpg"
     },
     {
       "name": "CSE Building, Floor 1",
       "description": "Computer Science and Engineering Building, Floor 1",
-      "imageURL": "https://cse.ucsd.edu/sites/cse.ucsd.edu/files/maps/CSE_EBU3_LEVEL1.jpg"
-    },
-    {
-      "name": "CSE Building, Floor 2",
-      "description": "Computer Science and Engineering Building, Floor 2",
-      "imageURL": "https://cse.ucsd.edu/sites/cse.ucsd.edu/files/maps/CSE_EBU3_LEVEL2.jpg"
-    },
-    {
-      "name": "CSE Building, Floor 3",
-      "description": "Computer Science and Engineering Building, Floor 3",
-      "imageURL": "https://cse.ucsd.edu/sites/cse.ucsd.edu/files/maps/CSE_LEVEL3.jpg"
-    },
-    {
-      "name": "CSE Building, Floor 4",
-      "description": "Computer Science and Engineering Building, Floor 4",
-      "imageURL": "https://cse.ucsd.edu/sites/cse.ucsd.edu/files/maps/CSE_LEVEL4.jpg"
+      "planURL": "https://cse.ucsd.edu/sites/cse.ucsd.edu/files/maps/CSE_EBU3_LEVEL1.jpg"
     }
+
   ],
   "cops": [
     {
@@ -63,6 +49,25 @@
       "name": "Warren Lecture Hall",
       "longitude": 32.8805336,
       "latitude": -117.2365006
+    }
+  ],
+  "shortcuts": [
+    {
+      "start": "Geisel",
+      "end": "RIMAC",
+      "image": "/images/Main-map.PNG"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Am i a test?",
+      "answer": "I am a test",
+      "id": "1"
+    },
+    {
+    "question": "another test?",
+    "answer": "you bet",
+    "id": "2"
     }
   ]
 }

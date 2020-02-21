@@ -15,10 +15,11 @@
 	<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
+	<!-- <script type="text/javascript" src="js/script.js"></script> -->
 	<script src="/js/bootstrap.js"></script>
 	<script src="/js/hamburger.js"></script>
     <script src="/js/search.js"></script>
+    <script src="/js/drawShortcut.js"></script>
 
 	<!-- Top Navigation Menu -->
 	<header class="title">
@@ -45,9 +46,17 @@
             {{/each}}
         </div>
     </div>
-    <div class="main-map">
+    <!-- <div class="main-map">
 		<img src="/images/Main-map.PNG" alt="Main map">
+	</div> -->
+
+	{{#each shortcuts}}
+	<div class="shortcuts">
+		<h3 id="shortcut" style="font-weight: bold;">Start: {{start}}</h3>
+		<h3 id="shortcut" style="font-weight: bold;">End: {{end}}</h3>
+		<img src="{{image}}" class="img-responsive img-rounded" id="picture">
 	</div>
+	{{/each}}
 
 
 </body>

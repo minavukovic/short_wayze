@@ -1,9 +1,12 @@
-<html>
+<!doctype html>
 
+<html>
 <head>
-	<title>Add Shortcut</title>
-	<link rel="stylesheet" href="/css/bootstrap.css">
-	<link rel="stylesheet" href="/css/bootstrap-theme.css">
+	<title>HCI Project Portfolio</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="/css/hamburger.css">
 	<link rel="stylesheet" href="/css/layout.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,10 +16,13 @@
 <body>
 	<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
+	<script src="/js/jquery-1.11.0.js"></script>
 	<script src="/js/bootstrap.js"></script>
 	<script src="/js/hamburger.js"></script>
+
+	<script src="/js/add_bld.js"></script>
+
+
 
 	<!-- Top Navigation Menu -->
 	<header class="title">
@@ -68,7 +74,7 @@
 							<input type="text" class="form-control" id="planURL" placeholder="URL" name="planURL">
 						</div>
 
-						<input type="submit" id="submitBtn" class="btn btn-default" value="Submit"></input>
+						<input type="submit" id="submitBtn" class="btn btn-default" value="Submit" ></input>
 					</form>
 
 				</div>
@@ -84,8 +90,7 @@
 	<div class="plans">
 		<h3 id="plan" style="font-weight: bold;">{{name}}</h3>
 		<h4 id="description">{{description}}</h4>
-		<img src="{{imageURL}}" class="img-responsive img-rounded" id="picture">
-
+		<img src="{{planURL}}" class="img-responsive img-rounded" id="picture">
 	</div>
 	{{/each}}
 </div>
