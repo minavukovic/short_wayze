@@ -1,0 +1,56 @@
+<html>
+
+<head>
+	<title>Short Wayze</title>
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/bootstrap-theme.css">
+	<link rel="stylesheet" href="/css/hamburger.css">
+	<link rel="stylesheet" href="/css/search.css">
+	<link rel="stylesheet" href="/css/layout.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+	<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://twitter.github.io/typeahead.js/js/handlebars.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script src="/js/bootstrap.js"></script>
+	<script src="/js/hamburger.js"></script>
+    <script src="/js/search.js"></script>
+	<!-- Top Navigation Menu -->
+	<header class="title">
+		<a href="/home" style="text-decoration: none;"><h1>SHORT WAYZE</h1></a>
+		<div class="top">
+			<a href="#" class="menu_icon"><i class="fa fa-bars"></i></a>
+		</div>
+    </header>
+	<nav class="menu">
+		<a href="/add/shortcut" class="item_menu">Add Shortcut</a>
+		<a href="/add/report" class="item_menu">Report Cop/Construction</a>
+		<a href="/add/building_plan" class="item_menu">Building Plans</a>
+		<a href="/help" class="item_menu">Need Help?</a>
+		<a href="/login" class="item_menu">Sign Out</a>
+	</nav>
+
+    <div class="main-map">
+        <img alt="Main map" id="map_image" src="">
+	</div>
+    <script>
+        function get_image() {
+            var img = document.getElementById("map_image");
+            var origin = window.location.search.substr(1).split("?")[0].split("=")[1];
+            var end = window.location.search.substr(1).split("?")[1].split("=")[1];
+            console.log(origin);
+            console.log(end);
+            img.src = "/images/" + origin + "_" + end + "_map.png";
+        }
+        get_image();
+    </script>
+
+
+</body>
+
+</html>

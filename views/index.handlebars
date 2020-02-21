@@ -41,7 +41,7 @@
         <div id="search_dropdown" class="search_dropdown-content">
             <input type="text" placeholder="Search Here..." id="loc_input" onkeyup="filterDestination()">
             {{#each locations}}
-             <a href="#">{{name}}</a>
+                <a href="/nav/start?origin={{abbreviation}}">{{name}}</a>
             {{/each}}
         </div>
     </div>

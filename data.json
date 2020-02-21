@@ -41,26 +41,31 @@
   "locations": [
     {
       "name": "64 Degrees",
+      "abbreviation": "64",
       "longitude": 32.8747808,
       "latitude": -117.2425759
     },
     {
       "name": "Geisel Library",
+      "abbreviation": "Geisel",
       "longitude": 32.8811751,
       "latitude": -117.239769
     },
     {
       "name": "Copley International Conference Center",
+      "abbreviation": "CICC",
       "longitude": 32.8850061,
       "latitude": -117.2434825
     },
     {
       "name": "Computer Science and Engineering Building",
+      "abbreviation": "CSE",
       "longitude": 32.8818051,
       "latitude": -117.2357122
     },
     {
       "name": "Warren Lecture Hall",
+      "abbreviation": "WLH",
       "longitude": 32.8805336,
       "latitude": -117.2365006
     }
