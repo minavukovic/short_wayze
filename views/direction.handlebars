@@ -1,0 +1,49 @@
+<html>
+
+<head>
+	<title>Short Wayze</title>
+	<link rel="stylesheet" href="/css/bootstrap.css">
+	<link rel="stylesheet" href="/css/bootstrap-theme.css">
+	<link rel="stylesheet" href="/css/hamburger.css">
+	<link rel="stylesheet" href="/css/search.css">
+	<link rel="stylesheet" href="/css/layout.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+	<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://twitter.github.io/typeahead.js/js/handlebars.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script src="/js/bootstrap.js"></script>
+	<script src="/js/hamburger.js"></script>
+    <script src="/js/search.js"></script>
+	<!-- Top Navigation Menu -->
+	<header class="title">
+		<a href="/nav" style="text-decoration: none;"><h1>SHORT WAYZE</h1></a>
+		<div class="top">
+			<a class="menu_icon"><i class="fa fa-bars"></i></a>
+		</div>
+    </header>
+    <nav class="menu" id="nav_menu">
+        {{#each routes}}
+            <a href="{{route}}" class="item-menu" id="nav_item_{{route}}">{{label}}</a>
+        {{/each}}
+    </nav>
+
+    <br>
+    <div class="edit_buttons">
+        <button type="button" class="btn btn-dark" onclick="window.location.href='/nav'">Return Home Once You Arrive</button>
+    </div>
+    <br>
+    <div class="main-map" id="map_img_container">
+	</div>
+    <script src="/js/navigation.js"></script>
+    <script>get_image_end();</script>
+
+
+</body>
+
+</html>

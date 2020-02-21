@@ -26,53 +26,78 @@
       "imageURL": "https://cse.ucsd.edu/sites/cse.ucsd.edu/files/maps/CSE_LEVEL4.jpg"
     }
   ],
-  "cops": [
-    {
-      "longitude": 32.876178,
-      "latitude": -117.24078,
-      "unixTime": 1581379800
-    },
-    {
-      "longitude": 32.884916,
-      "latitude": -117.240661,
-      "unixTime": 1581379900
-    }
-  ],
   "locations": [
     {
       "name": "64 Degrees",
+      "abbreviation": "64",
       "longitude": 32.8747808,
       "latitude": -117.2425759
     },
     {
       "name": "Geisel Library",
+      "abbreviation": "Geisel",
       "longitude": 32.8811751,
       "latitude": -117.239769
     },
     {
       "name": "Copley International Conference Center",
+      "abbreviation": "CICC",
       "longitude": 32.8850061,
       "latitude": -117.2434825
     },
     {
       "name": "Computer Science and Engineering Building",
+      "abbreviation": "CSE",
       "longitude": 32.8818051,
       "latitude": -117.2357122
     },
     {
       "name": "Warren Lecture Hall",
+      "abbreviation": "WLH",
       "longitude": 32.8805336,
       "latitude": -117.2365006
     }
   ],
-  "police": [
+  "routes": [
     {
-      "location": "Warren Lecture Hall",
-      "time": "11 am"
+      "name": "navigation",
+      "route": "/nav",
+      "label": "Start your Navigation Route"
     },
     {
-      "location": "Giesel",
-      "time": "2 pm"
+      "name": "report",
+      "route": "/add/report",
+      "label": "Report Cop/Construction"
+    },
+    {
+      "name": "building_plan",
+      "route": "/add/building_plan",
+      "label": "View/Add Building Plans"
+    },
+    {
+      "name": "logout",
+      "route": "/login",
+      "label": "Sign Out"
+    }
+  ],
+  "police": [
+    {
+      "location": "Library Walk (Next to the Arcade)",
+      "time": "11AM"
+    },
+    {
+      "location": "Ridge Walk (Between Revelle and Muir)",
+      "time": "2PM"
+    }
+  ],
+  "construction": [
+    {
+      "location": "Muir Parking Lot : - (",
+      "time": "Forever and ever..."
+    },
+    {
+      "location": "Geisel 2nd floor",
+      "time": "12AM"
     }
   ]
 }

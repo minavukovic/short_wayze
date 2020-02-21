@@ -29,3 +29,9 @@ img {
 .plans {
 	max-width: 500px;
 }
+
+.edit_buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

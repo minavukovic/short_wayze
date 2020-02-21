@@ -1,20 +1,37 @@
 /*
  * GET home page.
  */
+
 var data = require("../data.json");
 
-exports.addCop = function (req, res) {
-  var x = req.query.x;
-  var y = req.query.y;
+exports.addEvent = function(req, res) {
+  var type = req.query.type;
+  console.log(type);
 
-  var newFriend = { "x": x, "y": y };
+  var location = req.query.location;
+  var time = req.query.time;
 
-  console.log(x);
-  console.log(y);
-  data.police.push(newFriend);
+  var newEvent = {
+    "location": location,
+    "time": time
+  };
+
+  console.log(location);
+  console.log(time);
+
+  if (type === 'cop') {
+    console.log('cop');
+    if (location && time) {
+      console.log('chilling');
+      data.police.push(newEvent);
+    }
+  }
+  else {
+    console.log('construction');
+    if (location && time) {
+      console.log('chilling');
+      data.construction.push(newEvent);
+    }
+  }
   res.render("report", data);
 };
-
-/*exports.view = function(req, res){
-  res.render('report');
-};*/

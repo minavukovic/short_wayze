@@ -2,17 +2,19 @@
  * Module dependencies.
  */
 
-var express = require("express");
-var http = require("http");
-var path = require("path");
-var handlebars = require("express3-handlebars");
+var express = require('express');
+var http = require('http');
+var path = require('path');
+var handlebars = require('express3-handlebars');
 
-var index = require("./routes/index");
-var shortcut = require("./routes/shortcut");
-var report = require("./routes/report");
-var building_plan = require("./routes/building_plan");
-var help = require("./routes/help");
-var login = require("./routes/login");
+var index = require('./routes/index');
+var shortcut = require('./routes/shortcut');
+var report = require('./routes/report');
+var building_plan = require('./routes/building_plan');
+var help = require('./routes/help');
+var login = require('./routes/login');
+var start = require('./routes/start');
+var directions = require('./routes/direction');
 // Example route
 // var user = require('./routes/user');
 
@@ -38,16 +40,17 @@ if ("development" == app.get("env")) {
   app.use(express.errorHandler());
 }
 
-app.get("/home", index.view);
-app.get("/add/shortcut", shortcut.view);
+app.get('/nav', index.view);
+app.get('/add/shortcut', shortcut.view);
 // app.get('/add/building_plan', building_plan.view);
-app.get("/add/building_plan", building_plan.addBuildingPlan);
-app.get("/help", help.view);
-app.get("/", login.view);
-app.get("/login", login.view);
+app.get('/add/building_plan', building_plan.addBuildingPlan);
+app.get('/help', help.view);
+app.get('/', login.view);
+app.get('/login', login.view);
+app.get('/nav/start', start.view);
+app.get('/nav/directions', directions.view);
 
-app.get("/add/report", report.addCop);
-
+app.get("/add/report", report.addEvent);
 // Example route
 // app.get('/users', user.list);
 

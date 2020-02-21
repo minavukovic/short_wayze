@@ -5,7 +5,6 @@ function searchDestination() {
 }
 
 function filterDestination() {
-    console.log(document);
     var input, filter, a, i;
     input = document.getElementById("loc_input");
     filter = input.value.toUpperCase();

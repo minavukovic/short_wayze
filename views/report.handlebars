@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="/css/bootstrap.css">
 	<link rel="stylesheet" href="/css/bootstrap-theme.css">
 	<link rel="stylesheet" href="/css/hamburger.css">
+	<link rel="stylesheet" href="/css/layout.css">
 	<link rel="stylesheet" href="/css/report.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -20,20 +21,21 @@
 
 	<!-- Top Navigation Menu -->
 	<header class="title">
-		<a href="/home" style="text-decoration: none;">
-			<h1>SHORT WAYZE</h1>
-		</a>
+		<a href="/nav" style="text-decoration: none;">
+            <h1>SHORT WAYZE</h1>
+        </a>
 		<div class="top">
-			<a href="#" class="menu_icon"><i class="fa fa-bars"></i></a>
+			<a class="menu_icon"><i class="fa fa-bars"></i></a>
 		</div>
 	</header>
-	<nav class="menu">
-		<a href="/add/shortcut" class="item_menu">Add Shortcut</a>
-		<a href="/add/report" class="item_menu">Report Cop/Construction</a>
-		<a href="/add/building_plan" class="item_menu">Building Plans</a>
-		<a href="/help" class="item_menu">Need Help?</a>
-		<a href="/login" class="item_menu">Sign Out</a>
-	</nav>
+    <nav class="menu" id="nav_menu">
+        {{#each routes}}
+            <a href="{{route}}" class="item-menu" id="nav_item_{{route}}">{{label}}</a>
+        {{/each}}
+    </nav>
+    <div class="container">
+
+    </div>
 
 	<!--Trigger-->
 	<a class="login-trigger" href="#" data-target="#login" data-toggle="modal">Report</a>
@@ -45,17 +47,24 @@
 				<label class="modal-body">
 					<button data-dismiss="modal" class="close">&times;</button>
 
-					<h3>Report a Cop</h3>
+					<h2>Report the Cop/Construction</h2>
+                    <br>
 					<form id="addCop">
+                        <div class="form-group">
+                            <label for="cop_button">Cop</label>
+                            <input type="radio" value="cop" id="cop_button" name="type" checked>
+                            <label for="construction_button">Construction</label>
+                            <input type="radio" value="construction" id="construction_button" name="type">
+                        </div>
 						<div class="form-group">
-							<label for="name">Name:</label>
-							<input type="text" class="form-control" id="name" placeholder="Name" name="name">
+							<label for="location">Location:</label>
+							<input type="text" class="form-control" id="location" placeholder="Location" name="location">
 						</div>
 						<div class="form-group">
-							<label for="description">Description:</label>
-							<input type="text" class="form-control" id="description" placeholder="Description" name="y">
+							<label for="time">Time:</label>
+							<input type="text" class="form-control" id="time" placeholder="Time" name="time">
 						</div>
-						<input type="submit" id="submit-Btn" class="btn btn-default" value="Report Cop"></input>
+						<input type="submit" id="submit-Btn" class="btn btn-default" value="Report">
 					</form>
 					</input>
 				</label>
@@ -63,15 +72,28 @@
 		</label>
 	</label>
 
+    <br>
 	<h1>Recent Reports</h1>
-
+    <div class="little-border"></div>
+    <h2>Cops</h2>
 	{{#each police}}
 	<div class="report">
-		<p id="location" style="font-weight: bold;">{{location}} </p>
-		<p id="time">{{time}}</p>
-	</div>
+        <p id="location" style="font-weight: bold;">Location: {{location}} </p>
+        <p id="time">Time: {{time}}</p>
+        <div class="little-border"></div>
+    </div>
 	{{/each}}
 
+    <h2>Construction</h2>
+    {{#each construction}}
+        <div class="report">
+            <p id="location" style="font-weight: bold;">Location: {{location}} </p>
+            <p id="time">Time: {{time}}</p>
+            <div class="little-border"></div>
+        </div>
+    {{/each}}
+
+    <script src="/js/navigation.js"></script>
 </body>
 
 </html>
