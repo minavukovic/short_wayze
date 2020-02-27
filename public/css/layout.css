@@ -3,35 +3,46 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: "Poppins", sans-serif;
 }
-/*
-img {
-  padding: 0;
-  display: block;
-  margin: 0 auto;
-  max-height: 1;
-  max-width: 100%;
+
+.title h1 {
+  font-family: "Lobster";
 }
-*/
 
 #myModal {
-    max-height: calc(100vh - 200px);
-    overflow-y: auto;
-    max-width: ;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  max-width: ;
 }
 
 #picture {
-	max-width: 100%;
-    max-height: 100vh;
-    height: auto;
+  max-width: 100%;
+  max-height: 100vh;
+  height: auto;
 }
 
 .plans {
-	max-width: 500px;
+  max-width: 500px;
 }
 
 .edit_buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-button {
+  width: 100%;
+  background-color: #176881;
+  color: white;
+  padding: 16px;
+  align-self: center;
+  font-size: 16px;
+  border: none;
+}
+
+.building-plan {
+  padding: 0px;
+  margin: 0px;
 }

@@ -1,5 +1,5 @@
 body {
-  font-family: Arial;
+  font-family: "Poppins", sans-serif;
 }
 
 * {
@@ -10,7 +10,7 @@ form.example input[type="text"] {
   justify-self: left;
   padding: 10px;
   font-size: 17px;
-  border: 1px solid grey;
+  border: 1px solid #28a4c9;
   float: right;
   width: 80%;
   background: #f1f1f1;
@@ -44,62 +44,74 @@ form.example::after {
 
 /* Dropdown Button */
 .dropbtn {
-  background-color: darkgrey;
+  background-color: #176881;
   color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
   cursor: pointer;
   align-self: center;
+  width: 100%;
 }
 
 /* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-  background-color: dimgrey;
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #0d3c4b;
 }
-
 /* The search field */
 #loc_input {
   box-sizing: border-box;
-  background-image: url('searchicon.png');
+  background-image: url("searchicon.png");
   background-position: 14px 12px;
   background-repeat: no-repeat;
   font-size: 16px;
-  padding: 14px 20px 12px 45px;
+  padding: 14px 20px 12px 16px;
   border: none;
-  border-bottom: 1px solid #ddd;
+  width: 100%;
+  background: #ffffff;
 }
 
 /* The search field when it gets focus/clicked on */
-#loc_input:focus {outline: 3px solid #ddd;}
+#loc_input:focus {
+  outline: 3px solid #ddd;
+}
 
 /* The container <div> - needed to position the dropdown content */
 .search_dropdown_btn {
   position: relative;
   display: inline-block;
-  padding: 10px;
+  width: 100%;
+}
+.search_dropdown-content input {
+  color: white;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .search_dropdown-content {
   display: none;
   position: absolute;
-  background-color: white;
+  background-color: #646c6f;
   min-width: 230px;
-  border: 1px solid white;
+
   z-index: 1;
+  width: 100%;
 }
 
 /* Links inside the dropdown */
 .search_dropdown-content a {
-  color: black;
+  color: rgb(255, 255, 255);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
 /* Change color of dropdown links on hover */
-.search_dropdown-content a:hover {background-color: lightgrey}
+.search_dropdown-content a:hover {
+  background-color: rgb(14, 60, 75);
+}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
+.show {
+  display: block;
+}

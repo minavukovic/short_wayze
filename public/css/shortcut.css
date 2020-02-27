@@ -1,3 +1,6 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
 .middle_area .location_arrow {
   display: block;
   margin-left: auto;

@@ -2,31 +2,34 @@
 
 <head>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pattaya|Poppins:400,500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/login.css">
     {{>facebook}}
     <script src="/js/facebook.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
-    <title>Sign in</title>
+    <title>Short Wayze</title>
 
 </head>
 
 <body>
+    <div class="background-img"></div>
     <div class="main">
-        <p class="intro_title" id="top_title"></p>
+        <p class="intro_title"> Short Wayze </p>
         <form class="form1">
             <input class="un " type="text" align="center" placeholder="Username">
             <input class="pass" type="password" align="center" placeholder="Password">
 
-            <button class="submit" formaction="/nav" id="enter">Sign in</button>
+            <button class="submit" formaction="/nav" id="enter">Login</button>
             <p class="facebookLogin" align="center">
                 <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
                 </fb:login-button>
             </p>
             <p class="intro_title" id="bottom_title">Get ready to finally get to class on time!</p>
-<!--            <p class="forgot" align="center"><a href="/nav">Forgot Password?</a></p>-->
+            <!--            <p class="forgot" align="center"><a href="/nav">Forgot Password?</a></p>-->
         </form>
     </div>
     <script>
