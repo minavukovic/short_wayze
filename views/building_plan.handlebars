@@ -41,9 +41,9 @@
 		<button type="button" class="add-button" data-toggle="modal" data-target="#myModal">Add a building
 			plan</button>
 
-		<h4> List of all the building plans. </h4>
-
     {{#if building_plan_alt}}
+        <br>
+        <br>
         <!-- Search -->
         <div class="search_dropdown_btn">
             <button onclick="searchDestination()" class="dropbtn">Click here to search for a building plan!</button>
@@ -58,6 +58,8 @@
         <!-- Undo Button -->
         <div class="edit_buttons" id="undo_cntr">
         </div>
+    {{else}}
+        <h4> List of all the building plans. </h4>
     {{/if}}
 
     <br>

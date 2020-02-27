@@ -35,8 +35,13 @@
 		<a href="{{route}}" class="item-menu" id="nav_item_{{route}}">{{label}}</a>
 		{{/each}}
 	</nav>
+    {{#each locations}}
+        <p style="display: none;" id="p_{{abbreviation}}">{{name}}</p>
+    {{/each}}
 
 	<br>
+    <h3 style="text-align: center; align-self: center;" id="start_title"></h3>
+    <h3 style="text-align: center; align-self: center;" id="end_title"></h3>
 	<div class="edit_buttons">
 		<button type="button" class="btn btn-dark" onclick="window.location.href='/nav'">Return Home Once You
 			Arrive</button>
@@ -45,7 +50,9 @@
 	<div class="main-map" id="map_img_container">
 	</div>
 	<script src="/js/navigation.js"></script>
-	<script>get_image_end();</script>
+	<script>
+        get_image_end();
+    </script>
 
 
 </body>

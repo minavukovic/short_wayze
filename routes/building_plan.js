@@ -32,8 +32,8 @@ exports.addBuildingPlan = function(req, res) {
 	console.log(newPlan);
 	console.log(imageURL);
 	data.building_plans = removeValue(data.building_plans, name, description, imageURL);
-	data.building_plans = removeValue(data.building_plans, undefined, undefined, undefined);
 	data.building_plans.push(newPlan);
+	data.building_plans = removeValue(data.building_plans, undefined, undefined, undefined);
 	res.render('building_plan', data);	
 };
 
@@ -51,6 +51,7 @@ exports.addBuildingPlanAlt = function(req, res) { 
 
 	console.log(newPlan);
 	console.log(imageURL);
+	data.building_plans = removeValue(data.building_plans, name, description, imageURL);
 	data.building_plans.push(newPlan);
 	data.building_plans = removeValue(data.building_plans, undefined, undefined, undefined);
 	console.log(data.building_plans);

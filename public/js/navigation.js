@@ -7,12 +7,15 @@ function get_image_origin() {
     $('#map_img_container').html(imgHTML);
 }
 function get_image_end() {
-    var imgHTML, origin, end;
+    var imgHTML, origin, end, origin_name, origin_end;
     origin = window.location.search.substr(1).split("&")[0].split("=")[1];
     end = window.location.search.substr(1).split("&")[1].split("=")[1];
     imgHTML = '<img id=map_image src="/images/' + origin + '_' + end + '_map.png">';
     console.log(imgHTML);
     $('#map_img_container').html(imgHTML);
+
+    $('#start_title').text('Origin: ' + $('#p_' + origin).text());
+    $('#end_title').text('Destination: ' + $("#p_" + end).text());
 }
 function add_start_path() {
     var end_links = document.getElementsByClassName("end_links");
@@ -29,7 +32,6 @@ function remove_start() {
     var origin = window.location.search.substr(1).split("=")[1];
     var same_end = document.getElementById("end_" + origin);
     $('#start_title').text('Origin: ' + same_end.textContent);
-    console.log($('#start_title').text());
     same_end.parentNode.removeChild(same_end);
 
 }
