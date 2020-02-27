@@ -42,7 +42,7 @@
 	<div class="search_dropdown_btn">
 		<button onclick="searchDestination()" class="dropbtn">Find your route!</button>
 		<div id="search_dropdown" class="search_dropdown-content">
-			<input type="text" placeholder="Starting location" id="loc_input" onkeyup="filterDestination()">
+			<input type="text" placeholder="Starting location" id="loc_input" onkeyup="filterSearch()">
 			{{#each locations}}
 			<a href="/nav/start?origin={{abbreviation}}">{{name}}</a>
 			{{/each}}

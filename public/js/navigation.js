@@ -28,7 +28,10 @@ function add_start_path() {
 function remove_start() {
     var origin = window.location.search.substr(1).split("=")[1];
     var same_end = document.getElementById("end_" + origin);
+    $('#start_title').text('Origin: ' + same_end.textContent);
+    console.log($('#start_title').text());
     same_end.parentNode.removeChild(same_end);
+
 }
 function remove_repeated_nav() {
     var pathname = window.location.pathname;
@@ -36,5 +39,14 @@ function remove_repeated_nav() {
     if (nav_item) {
         nav_item.parentNode.removeChild(nav_item);
     }
+}
+function get_building_plan() {
+    var plan_div, building_plan;
+    building_plan = window.location.search.substr(1).split("=")[1];
+    building_plan = building_plan.replace(/%20/g, ' ');
+    plan_div = document.getElementById("plan_" + building_plan);
+    console.log(building_plan);
+    console.log(plan_div);
+    plan_div.style.display = "block";
 }
 remove_repeated_nav();

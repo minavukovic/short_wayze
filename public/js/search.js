@@ -4,7 +4,7 @@ function searchDestination() {
   document.getElementById("search_dropdown").classList.toggle("show");
 }
 
-function filterDestination() {
+function filterSearch() {
   var input, filter, a, i;
   input = document.getElementById("loc_input");
   filter = input.value.toUpperCase();

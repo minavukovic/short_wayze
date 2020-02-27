@@ -23,6 +23,8 @@
 	<script src="/js/hamburger.js"></script>
 	<script src="/js/search.js"></script>
 	<script src="/js/navigation.js"></script>
+    <script src="/js/report.js"></script>
+    <script src="/js/undo.js"></script>
 
 	<!-- Top Navigation Menu -->
 	<header class="title">
@@ -40,7 +42,12 @@
 	</nav>
 	<div class="container">
 
-	</div>
+        <!-- Undo Button -->
+        <div class="edit_buttons" id="undo_cntr">
+        </div>
+        <br>
+
+    </div>
 
 	<!--Trigger-->
 	<a class="login-trigger" href="#" data-target="#login" data-toggle="modal">Report</a>
@@ -54,7 +61,7 @@
 
 					<h2>Report the Cop/Construction</h2>
 					<br>
-					<form id="addCop">
+                    <form id="addEvent" role="form" method="get" action="/add/report">
 						<div class="form-group">
 							<label for="cop_button">Cop</label>
 							<input type="radio" value="cop" id="cop_button" name="type" checked>
@@ -99,7 +106,10 @@
 	</div>
 	{{/each}}
 
-	<script src="/js/navigation.js"></script>
+    <script src="/js/navigation.js"></script>
+    <script>
+        add_undo();
+    </script>
 </body>
 
 </html>

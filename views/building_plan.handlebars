@@ -19,6 +19,8 @@
 	<script type="text/javascript" src="js/script.js"></script>
 	<script src="/js/bootstrap.js"></script>
 	<script src="/js/hamburger.js"></script>
+    <script src="/js/search.js"></script>
+    <script src="/js/undo.js"></script>
 
 	<!-- Top Navigation Menu -->
 	<header class="title">
@@ -40,7 +42,21 @@
 
 		<h4> List of all the building plans. </h4>
 
-		<br>
+    <!-- Search -->
+    <div class="search_dropdown_btn">
+        <button onclick="searchDestination()" class="dropbtn">Click here to search for a building plan!</button>
+        <div id="search_dropdown" class="search_dropdown-content">
+            <input type="text" placeholder="Search Here..." id="loc_input" onkeyup="filterSearch()">
+            {{#each building_plans}}
+                <a href="/find?plan={{name}}" class="end_links">{{name}}</a>
+            {{/each}}
+        </div>
+    </div>
+
+    <!-- Undo Button -->
+    <div class="edit_buttons" id="undo_cntr">
+    </div>
+    <br>
 
 		<!-- Add building plan modal -->
 		<div id="myModal" class="modal fade" role="dialog">
@@ -130,7 +146,10 @@
 	</script>
 
 
-	<script src="/js/navigation.js"></script>
+    <script src="/js/navigation.js"></script>
+    <script>
+        add_undo();
+    </script>
 </body>
 
 </html>
