@@ -46,6 +46,7 @@ app.get('/nav', index.view);
 app.get('/add/shortcut', shortcut.view);
 // app.get('/add/building_plan', building_plan.view);
 app.get('/add/building_plan', building_plan.addBuildingPlan);
+app.get('/add/building_plan_alt', building_plan.addBuildingPlanAlt);
 app.get('/help', help.view);
 app.get('/', login.view);
 app.get('/login', login.view);

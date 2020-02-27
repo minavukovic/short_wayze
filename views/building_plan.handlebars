@@ -86,15 +86,53 @@
 			</div>
 		</div>
 
-		{{#each building_plans}}
-		<div class="plans">
-			<h3 id="plan" style="font-weight: bold;">{{name}}</h3>
-			<h4 id="description">{{description}}</h4>
-			<img src="{{imageURL}}" class="img-responsive img-rounded" id="picture">
+		{{#if building_plan_alt}}
+			
+			{{#each building_plans}}
+			<button class="accordion"> {{name}} </button>
+			<div class="panel">
+				<div class="plans">
+					<h3 id="plan" style="font-weight: bold;">{{name}}</h3>
+					<h4 id="description">{{description}}</h4>
+					<img src="{{imageURL}}" class="img-responsive img-rounded" id="picture">
 
-		</div>
-		{{/each}}
+				</div>
+			</div>
+			{{/each}}
+
+		{{else}}
+
+			{{#each building_plans}}
+			<div class="plans">
+				<h3 id="plan" style="font-weight: bold;">{{name}}</h3>
+				<h4 id="description">{{description}}</h4>
+				<img src="{{imageURL}}" class="img-responsive img-rounded" id="picture">
+
+			</div>
+			{{/each}}
+			
+		{{/if}}
+
 	</div>
+
+	<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+			acc[i].addEventListener("click", function() {
+				this.classList.toggle("active");
+				var panel = this.nextElementSibling;
+				if (panel.style.display === "block") {
+					panel.style.display = "none";
+				} else {
+					panel.style.display = "block";
+				}
+			});
+		}
+	</script>
+
+
 	<script src="/js/navigation.js"></script>
 </body>
 
