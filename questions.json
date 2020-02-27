@@ -8,5 +8,10 @@
 		"id": "2",
 		"question": "Can I only report cops or construction on campus?",
 		"answer": "Yes, unfortunately we currently only support reporting these two features."
+	},
+	{
+		"id": "3",
+		"question": "I have a shortcut I'd like to share. How can I do this?",
+		"answer": "If you want your shortcut to show up as a suggestion, please email the developers at shortwayze@realemail.com and we will consider using it. We will reach out if we do. Thanks for your help."
 	}
 ]

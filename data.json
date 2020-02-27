@@ -88,21 +88,21 @@
   "police": [
     {
       "location": "Library Walk (Next to the Arcade)",
-      "time": "11AM"
+      "time": "11:03"
     },
     {
       "location": "Ridge Walk (Between Revelle and Muir)",
-      "time": "2PM"
+      "time": "17:30"
     }
   ],
   "construction": [
     {
       "location": "Muir Parking Lot : - (",
-      "time": "Forever and ever..."
+      "time": "15:20"
     },
     {
       "location": "Geisel 2nd floor",
-      "time": "12AM"
+      "time": "08:10"
     }
   ],
   "faq": [
@@ -115,6 +115,11 @@
       "question": "Can I only report cops or construction on campus?",
       "answer": "Yes, unfortunately we currently only support reporting these two features.",
       "id": "question2"
+    },
+    {
+      "question": "I have a shortcut I'd like to share. How can I do this?",
+      "answer": "If you want your shortcut to show up as a suggestion, please email the devlopers at shortwayze@realemail.com and we will consider using it. We will reach out if we do. Thanks for your help.",
+      "id": "question3"
     }
   ]
 }
