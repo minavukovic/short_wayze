@@ -49,6 +49,7 @@ app.get('/add/shortcut', shortcut.view);
 app.get('/add/building_plan', building_plan.addBuildingPlan);
 app.get('/add/building_plan_alt', building_plan.addBuildingPlanAlt);
 app.get('/add/building_plan/undo', building_plan.removeBuildingPlan);
+app.get('/add/building_plan_alt/undo', building_plan.removeBuildingPlanAlt);
 app.get('/help', help.view);
 app.get('/', login.view);
 app.get('/login', login.view);
