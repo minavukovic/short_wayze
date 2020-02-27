@@ -32,9 +32,9 @@
 		</div>
 	</header>
 	<nav class="menu" id="nav_menu">
-        {{#each routes}}
-            <a href="{{route}}" class="item-menu" id="nav_item_{{route}}">{{label}}</a>
-        {{/each}}
+		{{#each routes}}
+		<a href="{{route}}" class="item-menu" id="nav_item_{{route}}">{{label}}</a>
+		{{/each}}
 	</nav>
 
 	<!-- Search -->
@@ -43,14 +43,14 @@
 		<div id="search_dropdown" class="search_dropdown-content">
 			<input type="text" placeholder="Ending location" id="loc_input" onkeyup="filterSearch()">
 			{{#each locations}}
-			    <a href="/nav/directions?end={{abbreviation}}" id="end_{{abbreviation}}" class="end_links">{{name}}</a>
+			<a href="/nav/directions?end={{abbreviation}}" id="end_{{abbreviation}}" class="end_links">{{name}}</a>
 			{{/each}}
 		</div>
 	</div>
-    <h3 style="text-align: center; align-self: center;" id="start_title"></h3>
-    <div class="edit_buttons">
-        <button type="button" class="btn btn-dark" onclick="window.location.href='/nav'">Back</button>
-    </div>
+	<h3 id="start_title"></h3>
+	<div class="edit_buttons">
+		<button type="button" class="btn btn-dark" onclick="window.location.href='/nav'">Back</button>
+	</div>
 	<div class="main-map" id="map_img_container">
 	</div>
 	<script src="/js/navigation.js"></script>
@@ -58,7 +58,7 @@
 		get_image_origin();
 		remove_start();
 		add_start_path();
-    </script>
+	</script>
 
 </body>
 

@@ -6,7 +6,8 @@
 	<link rel="stylesheet" href="/css/bootstrap-theme.css">
 	<link rel="stylesheet" href="/css/hamburger.css">
 	<link rel="stylesheet" href="/css/layout.css">
-    <link rel="stylesheet" href="/css/search.css">
+	<link rel="stylesheet" href="/css/search.css">
+	<link rel="stylesheet" href="/css/buildplan_alt.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
@@ -20,8 +21,8 @@
 	<script type="text/javascript" src="js/script.js"></script>
 	<script src="/js/bootstrap.js"></script>
 	<script src="/js/hamburger.js"></script>
-    <script src="/js/search.js"></script>
-    <script src="/js/undo.js"></script>
+	<script src="/js/search.js"></script>
+	<script src="/js/undo.js"></script>
 
 	<!-- Top Navigation Menu -->
 	<header class="title">
@@ -38,31 +39,29 @@
 		{{/each}}
 	</nav>
 	<div class="building-plan">
+		{{#if building_plan_alt}}
+		<button type="button" class="add-button_alt" data-toggle="modal" data-target="#myModal">Add a building
+			plan</button>
+		<!-- Search -->
+		<div class="search_dropdown">
+			<button onclick="searchDestination()" class="drop-button">Search for a building plan</button>
+			<div id="search_dropdown" class="search_dropdown-content">
+				<input type="text" placeholder="Search Here..." id="loc_input" onkeyup="filterSearch()">
+				{{#each building_plans}}
+				<a href="/find?plan={{name}}" class="end_links">{{name}}</a>
+				{{/each}}
+			</div>
+		</div>
+
+		<!-- Undo Button -->
+		<div class="edit_buttons" id="undo_cntr">
+		</div>
+		{{else}}
 		<button type="button" class="add-button" data-toggle="modal" data-target="#myModal">Add a building
 			plan</button>
+		{{/if}}
 
-    {{#if building_plan_alt}}
-        <br>
-        <br>
-        <!-- Search -->
-        <div class="search_dropdown_btn">
-            <button onclick="searchDestination()" class="dropbtn">Click here to search for a building plan!</button>
-            <div id="search_dropdown" class="search_dropdown-content">
-                <input type="text" placeholder="Search Here..." id="loc_input" onkeyup="filterSearch()">
-                {{#each building_plans}}
-                    <a href="/find?plan={{name}}" class="end_links">{{name}}</a>
-                {{/each}}
-            </div>
-        </div>
-
-        <!-- Undo Button -->
-        <div class="edit_buttons" id="undo_cntr">
-        </div>
-    {{else}}
-        <h4> List of all the building plans. </h4>
-    {{/if}}
-
-    <br>
+		<br>
 
 		<!-- Add building plan modal -->
 		<div id="myModal" class="modal fade" role="dialog">
@@ -75,53 +74,53 @@
 						<!-- <h4 class="modal-title">Add a building plan</h4> -->
 					</div>
 					<div class="modal-body">
-                        {{#if building_plan_alt}}
-						    <form id="addBuildingPlan" role="form" method="get" action="/add/building_plan_alt">
-							    <h3>Add a building plan</h3>
-							    <p> Add a building plan. Insert the name of the building, a small description, and the URL
-								    to the image of the plan.</p>
+						{{#if building_plan_alt}}
+						<form id="addBuildingPlan" role="form" method="get" action="/add/building_plan_alt">
+							<h3>Add a building plan</h3>
+							<p> Add a building plan. Insert the name of the building, a small description, and the URL
+								to the image of the plan.</p>
 
-							    <div class="form-group">
-								    <label for="name">Building Name:</label>
-								    <input type="text" class="form-control" id="name" placeholder="Building Name"
-									    name="name">
-							    </div>
-							    <div class="form-group">
-								    <label for="description">Description:</label>
-								    <input type="text" class="form-control" id="description" placeholder="Description"
-									    name="description">
-							    </div>
-							    <div class="form-group">
-								    <label for="url">URL:</label>
-								    <input type="text" class="form-control" id="planURL" placeholder="URL" name="planURL">
-							    </div>
+							<div class="form-group">
+								<label for="name">Building Name:</label>
+								<input type="text" class="form-control" id="name" placeholder="Building Name"
+									name="name">
+							</div>
+							<div class="form-group">
+								<label for="description">Description:</label>
+								<input type="text" class="form-control" id="description" placeholder="Description"
+									name="description">
+							</div>
+							<div class="form-group">
+								<label for="url">URL:</label>
+								<input type="text" class="form-control" id="planURL" placeholder="URL" name="planURL">
+							</div>
 
-							    <input type="submit" id="submitBtn" class="submit-button" value="Submit"></input>
-						    </form>
-                        {{else}}
-                            <form id="addBuildingPlan" role="form" method="get" action="/add/building_plan">
-                                <h3>Add a building plan</h3>
-                                <p> Add a building plan. Insert the name of the building, a small description, and the URL
-                                    to the image of the plan.</p>
+							<input type="submit" id="submitBtn" class="submit-button" value="Submit"></input>
+						</form>
+						{{else}}
+						<form id="addBuildingPlan" role="form" method="get" action="/add/building_plan">
+							<h3>Add a building plan</h3>
+							<p> Add a building plan. Insert the name of the building, a small description, and the URL
+								to the image of the plan.</p>
 
-                                <div class="form-group">
-                                    <label for="name">Building Name:</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Building Name"
-                                           name="name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="description">Description:</label>
-                                    <input type="text" class="form-control" id="description" placeholder="Description"
-                                           name="description">
-                                </div>
-                                <div class="form-group">
-                                    <label for="url">URL:</label>
-                                    <input type="text" class="form-control" id="planURL" placeholder="URL" name="planURL">
-                                </div>
+							<div class="form-group">
+								<label for="name">Building Name:</label>
+								<input type="text" class="form-control" id="name" placeholder="Building Name"
+									name="name">
+							</div>
+							<div class="form-group">
+								<label for="description">Description:</label>
+								<input type="text" class="form-control" id="description" placeholder="Description"
+									name="description">
+							</div>
+							<div class="form-group">
+								<label for="url">URL:</label>
+								<input type="text" class="form-control" id="planURL" placeholder="URL" name="planURL">
+							</div>
 
-                                <input type="submit" id="submitBtn" class="submit-button" value="Submit"></input>
-                            </form>
-                        {{/if}}
+							<input type="submit" id="submitBtn" class="submit-button" value="Submit"></input>
+						</form>
+						{{/if}}
 
 					</div>
 				</div>
@@ -130,30 +129,31 @@
 		</div>
 
 		{{#if building_plan_alt}}
-			
-			{{#each building_plans}}
-			<button class="accordion"> {{name}} </button>
-			<div class="panel">
-				<div class="plans">
-					<h3 id="plan" style="font-weight: bold;">{{name}}</h3>
-					<h4 id="description">{{description}}</h4>
-					<img src="{{imageURL}}" class="img-responsive img-rounded" id="picture">
 
-				</div>
-			</div>
-			{{/each}}
+		{{#each building_plans}}
+		<button class="accordion"> {{name}} </button>
 
-		{{else}}
-
-			{{#each building_plans}}
+		<div class="panel">
 			<div class="plans">
 				<h3 id="plan" style="font-weight: bold;">{{name}}</h3>
 				<h4 id="description">{{description}}</h4>
 				<img src="{{imageURL}}" class="img-responsive img-rounded" id="picture">
 
 			</div>
-			{{/each}}
-			
+		</div>
+		{{/each}}
+
+		{{else}}
+
+		{{#each building_plans}}
+		<div class="plans">
+			<h3 id="plan" style="font-weight: bold;">{{name}}</h3>
+			<h4 id="description">{{description}}</h4>
+			<img src="{{imageURL}}" class="img-responsive img-rounded" id="picture">
+
+		</div>
+		{{/each}}
+
 		{{/if}}
 
 	</div>
@@ -163,7 +163,7 @@
 		var i;
 
 		for (i = 0; i < acc.length; i++) {
-			acc[i].addEventListener("click", function() {
+			acc[i].addEventListener("click", function () {
 				this.classList.toggle("active");
 				var panel = this.nextElementSibling;
 				if (panel.style.display === "block") {
@@ -176,10 +176,10 @@
 	</script>
 
 
-    <script src="/js/navigation.js"></script>
-    <script>
-        add_undo();
-    </script>
+	<script src="/js/navigation.js"></script>
+	<script>
+		add_undo();
+	</script>
 </body>
 
 </html>

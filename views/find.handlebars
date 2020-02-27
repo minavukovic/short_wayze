@@ -1,68 +1,71 @@
 <html>
 
 <head>
-	<title>Add Shortcut</title>
-	<link rel="stylesheet" href="/css/bootstrap.css">
-	<link rel="stylesheet" href="/css/bootstrap-theme.css">
-	<link rel="stylesheet" href="/css/hamburger.css">
-	<link rel="stylesheet" href="/css/layout.css">
+    <title>Add Shortcut</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="/css/hamburger.css">
+    <link rel="stylesheet" href="/css/layout.css">
     <link rel="stylesheet" href="/css/search.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pattaya|Poppins:400,500&display=swap" rel="stylesheet" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 
 <body>
-	<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
 
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
-	<script src="/js/bootstrap.js"></script>
-	<script src="/js/hamburger.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/hamburger.js"></script>
     <script src="/js/search.js"></script>
 
-	<!-- Top Navigation Menu -->
-	<header class="title">
-		<a href="/nav" style="text-decoration: none;"><h1>SHORT WAYZE</h1></a>
-		<div class="top">
-			<a class="menu_icon"><i class="fa fa-bars"></i></a>
-		</div>
-	</header>
+    <!-- Top Navigation Menu -->
+    <header class="title">
+        <a href="/nav" style="text-decoration: none;">
+            <h1>Short Wayze</h1>
+        </a>
+        <div class="top">
+            <a class="menu_icon"><i class="fa fa-bars"></i></a>
+        </div>
+    </header>
     <nav class="menu" id="nav_menu">
         {{#each routes}}
-            <a href="{{route}}" class="item-menu" id="nav_item_{{route}}">{{label}}</a>
+        <a href="{{route}}" class="item-menu" id="nav_item_{{route}}">{{label}}</a>
         {{/each}}
     </nav>
     <div class="container">
 
         <!-- Search -->
-        <div class="search_dropdown_btn">
-            <button onclick="searchDestination()" class="dropbtn">Click here to search for another building plan!</button>
+        <div class="search_dropdown_button">
+            <button onclick="searchDestination()" class="dropdown_button">Search for another building
+                plan</button>
             <div id="search_dropdown" class="search_dropdown-content">
                 <input type="text" placeholder="Search Here..." id="loc_input" onkeyup="filterSearch()">
                 {{#each building_plans}}
-                    <a href="/find?plan={{name}}" class="end_links">{{name}}</a>
+                <a href="/find?plan={{name}}" class="end_links">{{name}}</a>
                 {{/each}}
             </div>
         </div>
 
         <!-- Undo Button -->
         <div class="edit_buttons" id="undo_cntr">
-            <button type="button" class="btn btn-dark"
-                    onclick="window.location.href='/add/building_plan_alt'">Back to All Building Plans</button>
+            <button type="button" class="btn btn-dark" onclick="window.location.href='/add/building_plan_alt'">Back to
+                All Building Plans</button>
         </div>
 
-	    {{#each building_plans}}
-	    <div class="plans">
+        {{#each building_plans}}
+        <div class="plans">
             <div id="plan_{{name}}" style="display: none;">
-		        <h3 id="curr_plan" style="font-weight: bold;">{{name}}</h3>
-		        <h4 id="curr_description">{{description}}</h4>
-		        <img src="{{imageURL}}" class="img-responsive img-rounded" id="picture">
+                <h3 id="curr_plan" style="font-weight: bold;">{{name}}</h3>
+                <h4 id="curr_description">{{description}}</h4>
+                <img src="{{imageURL}}" class="img-responsive img-rounded" id="picture">
             </div>
-	    </div>
-	    {{/each}}
+        </div>
+        {{/each}}
     </div>
     <script src="/js/navigation.js"></script>
     <script>

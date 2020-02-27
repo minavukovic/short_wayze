@@ -40,22 +40,25 @@
 		{{/each}}
 	</nav>
 
-
 	<div class="help">
 		<h1 class="faq"> FAQ </h1>
 		<p>Click to see answer</p>
+		<ol>
 
-		{{#each faq}}
-		<div class="question" id="{{id}}">
-			<div class="q">
-				<h2><a href="#">{{question}}</a></h2>
+			{{#each faq}}
+			<div class="question" id="{{id}}">
+				<div class="q">
+					<li>
+						<h2><a href="#">{{question}}</a></h2>
+					</li>
+				</div>
+				<div class="details"></div>
+
 			</div>
-			<div class="details"></div>
-
-		</div>
-		{{/each}}
-
+			{{/each}}
+		</ol>
 	</div>
+
 
 	<script src="/js/navigation.js"></script>
 
