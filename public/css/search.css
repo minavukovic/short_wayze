@@ -51,8 +51,9 @@ form.example::after {
   border: none;
   cursor: pointer;
   align-self: center;
-  width: 100%;
-  margin: 5px 0px;
+  width: 180px;
+  margin: 10px;
+  border-radius: 5px;
 }
 
 /* Dropdown button on hover & focus */
@@ -84,6 +85,11 @@ form.example::after {
   position: relative;
   display: inline-block;
   width: 100%;
+  width: 100%;
+  left: 50% !important;
+  right: auto !important;
+  text-align: center !important;
+  transform: translate(-50%, 0) !important;
 }
 .search_dropdown-content input {
   color: white;
@@ -148,8 +154,7 @@ body {
 }
 
 .btn-dark {
-  width: 90%;
-  margin: 5px 0px;
+  width: 180px;
 }
 
 #start_title,

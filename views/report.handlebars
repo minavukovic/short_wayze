@@ -23,8 +23,8 @@
 	<script src="/js/hamburger.js"></script>
 	<script src="/js/search.js"></script>
 	<script src="/js/navigation.js"></script>
-    <script src="/js/report.js"></script>
-    <script src="/js/undo.js"></script>
+	<script src="/js/report.js"></script>
+	<script src="/js/undo.js"></script>
 
 	<!-- Top Navigation Menu -->
 	<header class="title">
@@ -42,74 +42,75 @@
 	</nav>
 	<div class="container">
 
-        <!-- Undo Button -->
-        <div class="edit_buttons" id="undo_cntr">
-        </div>
-        <br>
+		<!-- Undo Button -->
+		<div class="edit_buttons" id="undo_cntr">
+		</div>
+		<br>
 
-    </div>
+	</div>
 
-	<!--Trigger-->
-	<a class="login-trigger" href="#" data-target="#login" data-toggle="modal">Report</a>
+	<div class="report">
+		<!--Trigger-->
+		<a class="login-trigger" href="#" data-target="#login" data-toggle="modal">Report</a>
 
-	<label id="login" class="modal fade" role="dialog">
-		<label class="modal-dialog">
+		<label id="login" class="modal fade" role="dialog">
+			<label class="modal-dialog">
 
-			<label class="modal-content">
-				<label class="modal-body">
-					<button data-dismiss="modal" class="close">&times;</button>
+				<label class="modal-content">
+					<label class="modal-body">
+						<button data-dismiss="modal" class="close">&times;</button>
 
-					<h2>Report the Cop/Construction</h2>
-					<br>
-                    <form id="addEvent" role="form" method="get" action="/add/report">
-						<div class="form-group">
-							<label for="cop_button">Cop</label>
-							<input type="radio" value="cop" id="cop_button" name="type" checked>
-							<label for="construction_button">Construction</label>
-							<input type="radio" value="construction" id="construction_button" name="type">
-						</div>
-						<div class="form-group">
-							<label for="location">Location:</label>
-							<input type="text" class="form-control" id="location" placeholder="Location"
-								name="location">
-						</div>
-						<div class="form-group">
-							<label for="time">Time:</label>
-							<input type="time" class="form-control" id="time" placeholder="10AM" name="time">
-						</div>
-						<input type="submit" id="submit-Btn" class="report-button" value="Report">
-					</form>
-					</input>
+						<h2>Report the Cop/Construction</h2>
+						<br>
+						<form id="addEvent" role="form" method="get" action="/add/report">
+							<div class="form-group">
+								<label for="cop_button">Cop</label>
+								<input type="radio" value="cop" id="cop_button" name="type" checked>
+								<label for="construction_button">Construction</label>
+								<input type="radio" value="construction" id="construction_button" name="type">
+							</div>
+							<div class="form-group">
+								<label for="location">Location:</label>
+								<input type="text" class="form-control" id="location" placeholder="Location"
+									name="location">
+							</div>
+							<div class="form-group">
+								<label for="time">Time:</label>
+								<input type="time" class="form-control" id="time" placeholder="10AM" name="time">
+							</div>
+							<input type="submit" id="submit-Btn" class="report-button" value="Report">
+						</form>
+						</input>
+					</label>
 				</label>
 			</label>
 		</label>
-	</label>
 
-	<br>
-	<h1>Recent Reports</h1>
-	<div class="little-border"></div>
-	<h2>Cops</h2>
-	{{#each police}}
-	<div class="report">
-		<p id="location" style="font-weight: bold;">Location: {{location}} </p>
-		<p id="time">Time: {{time}}</p>
+		<br>
+		<h1>Recent Reports</h1>
 		<div class="little-border"></div>
-	</div>
-	{{/each}}
+		<h2>Cops</h2>
+		{{#each police}}
+		<div class="report">
+			<p id="location" style="font-weight: bold;">Location: {{location}} </p>
+			<p id="time">Time: {{time}}</p>
+			<div class="little-border"></div>
+		</div>
+		{{/each}}
 
-	<h2>Construction</h2>
-	{{#each construction}}
-	<div class="report">
-		<p id="location" style="font-weight: bold;">Location: {{location}} </p>
-		<p id="time">Time: {{time}}</p>
-		<div class="little-border"></div>
+		<h2>Construction</h2>
+		{{#each construction}}
+		<div class="report">
+			<p id="location" style="font-weight: bold;">Location: {{location}} </p>
+			<p id="time">Time: {{time}}</p>
+			<div class="little-border"></div>
+		</div>
+		{{/each}}
 	</div>
-	{{/each}}
-
-    <script src="/js/navigation.js"></script>
-    <script>
-        add_undo();
-    </script>
+	<script src="/js/navigation.js"></script>
+	<script>
+		add_undo();
+	</script>
 </body>
 
 </html>

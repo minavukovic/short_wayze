@@ -24,8 +24,10 @@ nav {
   position: relative;
   display: flex;
   justify-content: center;
-
   align-content: center;
+  margin: auto;
+  width: 180px;
+  border-radius: 5px;
 }
 
 /*Modal*/
@@ -90,4 +92,8 @@ h4 {
 .modal-dialog {
   color: white;
   text-emphasis: none;
+}
+
+.report {
+  margin: 0 16px;
 }

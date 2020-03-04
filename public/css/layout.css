@@ -11,7 +11,6 @@ body {
 }
 
 #myModal {
-  max-height: calc(100vh - 200px);
   overflow-y: auto;
   color: white;
 }
@@ -20,10 +19,7 @@ body {
   max-width: 100%;
   max-height: 100vh;
   height: auto;
-}
-
-.plans {
-  max-width: 500px;
+  padding-bottom: 30px;
 }
 
 .edit_buttons {
@@ -34,19 +30,22 @@ body {
 }
 
 .add-button {
-  width: 100%;
+  width: 180px;
   background-color: #176881;
   color: white;
   padding: 16px;
   align-self: center;
-  font-size: 16px;
+  font-size: 17px;
   border: none;
-  margin: 5px 0px;
+  margin-top: 10px;
+  border-radius: 5px;
 }
 
 .building-plan {
   padding: 0px;
   margin: 0px;
+  display: flex;
+  flex-direction: column;
 }
 
 .accordion {
@@ -67,7 +66,6 @@ body {
 }
 
 .panel {
-  padding: 0 18px;
   display: none;
   background-color: white;
   overflow: hidden;
@@ -86,4 +84,11 @@ body {
   display: flex;
   align-content: center;
   margin: none;
+}
+.plans {
+  padding: 0px 16px;
+}
+
+.start_location {
+  text-align: start;
 }
