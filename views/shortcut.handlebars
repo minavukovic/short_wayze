@@ -8,11 +8,13 @@
 	<link rel="stylesheet" href="/css/shortcut.css">
 	<link rel="stylesheet" href="/css/add_shortcut_dropdown.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pattaya|Poppins:400,500&display=swap" rel="stylesheet" />
 </head>
 
 <body>
 	<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 	<script src="/js/bootstrap.js"></script>
@@ -22,17 +24,17 @@
 	<!-- Top Navigation Menu -->
 	<header class="title">
 		<a href="/nav" style="text-decoration: none;">
-            <h1>SHORT WAYZE</h1>
-        </a>
+			<h1>Short Wayze</h1>
+		</a>
 		<div class="top">
 			<a class="menu_icon"><i class="fa fa-bars"></i></a>
 		</div>
 	</header>
-    <nav class="menu" id="nav_menu">
-        {{#each routes}}
-            <a href="{{route}}" class="item-menu" id="nav_item_{{route}}">{{label}}</a>
-        {{/each}}
-    </nav>
+	<nav class="menu" id="nav_menu">
+		{{#each routes}}
+		<a href="{{route}}" class="item-menu" id="nav_item_{{route}}">{{label}}</a>
+		{{/each}}
+	</nav>
 
 	<!-- Dropdown to add start and end location for adding shortcut-->
 	<div class="middle_area">
@@ -51,20 +53,20 @@
 			<span onclick="openNav()">&#11167;</span>
 
 		</div>
-    </div>
+	</div>
 
-		<div class="middle_area">
-			<img src="/images/shortcut_map.png" alt="Static map" class="map">
-			</br>
-			<div class="edit_buttons">
-				<button type="button" class="btn btn-dark">Start/Stop</button>
-				<button type="button" class="btn btn-dark">Undo</button>
-				<button type="button" class="btn btn-dark">Clear</button>
-				<button type="button" class="btn btn-dark">Done</button>
-			</div>
+	<div class="middle_area">
+		<img src="/images/shortcut_map.png" alt="Static map" class="map">
+		</br>
+		<div class="edit_buttons">
+			<button type="button" class="btn btn-dark">Start/Stop</button>
+			<button type="button" class="btn btn-dark">Undo</button>
+			<button type="button" class="btn btn-dark">Clear</button>
+			<button type="button" class="btn btn-dark">Done</button>
 		</div>
 	</div>
-    <script src="/js/navigation.js"></script>
+	</div>
+	<script src="/js/navigation.js"></script>
 
 
 </body>

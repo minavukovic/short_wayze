@@ -1,6 +1,7 @@
 body {
   height: 100vh;
   text-align: center;
+  font-family: "Poppins", sans-serif;
 }
 
 nav {
@@ -9,7 +10,7 @@ nav {
 
 .little-border {
   display: block;
-  width: 80px;
+  width: 100%;
   height: 3px;
   background: #f1cd8f;
   margin: 20px auto;
@@ -17,15 +18,13 @@ nav {
 
 /*Trigger Button*/
 .login-trigger {
-  font-weight: bold;
   color: #fff;
-  background: linear-gradient(to bottom right, #b05574, #f87e7b);
+  background: #176881;
   padding: 15px 30px;
-  border-radius: 30px;
   position: relative;
   display: flex;
   justify-content: center;
- 
+
   align-content: center;
 }
 
@@ -39,8 +38,7 @@ h4 {
   transform: scale(1.2);
 }
 .modal-content {
-  font-weight: bold;
-  background: linear-gradient(to bottom right, #f87e7b, #b05574);
+  background: rgb(65, 81, 87);
 }
 .form-control {
   margin: 1em 0;
@@ -82,3 +80,14 @@ h4 {
   color: #fff;
 }
 
+.report-button {
+  background-color: #0d3c4b;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+
+.modal-dialog {
+  color: white;
+  text-emphasis: none;
+}

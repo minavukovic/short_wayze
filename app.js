@@ -15,6 +15,9 @@ var help = require('./routes/help');
 var login = require('./routes/login');
 var start = require('./routes/start');
 var directions = require('./routes/direction');
+var questions = require('./routes/questions');
+var find = require('./routes/find');
+
 // Example route
 // var user = require('./routes/user');
 
@@ -44,13 +47,18 @@ app.get('/nav', index.view);
 app.get('/add/shortcut', shortcut.view);
 // app.get('/add/building_plan', building_plan.view);
 app.get('/add/building_plan', building_plan.addBuildingPlan);
+app.get('/add/building_plan_alt', building_plan.addBuildingPlanAlt);
+app.get('/add/building_plan/undo', building_plan.removeBuildingPlan);
+app.get('/add/building_plan_alt/undo', building_plan.removeBuildingPlanAlt);
 app.get('/help', help.view);
 app.get('/', login.view);
 app.get('/login', login.view);
 app.get('/nav/start', start.view);
 app.get('/nav/directions', directions.view);
-
+app.get('/question/:number', questions.questionInfo);
 app.get("/add/report", report.addEvent);
+app.get("/add/report/undo", report.removeEvent);
+app.get("/find", find.view);
 // Example route
 // app.get('/users', user.list);
 

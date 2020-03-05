@@ -8,49 +8,57 @@
 	<link rel="stylesheet" href="/css/search.css">
 	<link rel="stylesheet" href="/css/layout.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pattaya|Poppins:400,500&display=swap" rel="stylesheet" />
 
 </head>
 
 <body>
 	<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://twitter.github.io/typeahead.js/js/handlebars.js"></script>
+	<script src="https://twitter.github.io/typeahead.js/js/handlebars.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 	<script src="/js/bootstrap.js"></script>
 	<script src="/js/hamburger.js"></script>
-    <script src="/js/search.js"></script>
+	<script src="/js/search.js"></script>
 	<!-- Top Navigation Menu -->
 	<header class="title">
-		<a href="/nav" style="text-decoration: none;"><h1>SHORT WAYZE</h1></a>
+		<a href="/nav" style="text-decoration: none;">
+			<h1>Short Wayze</h1>
+		</a>
 		<div class="top">
 			<a class="menu_icon"><i class="fa fa-bars"></i></a>
 		</div>
-    </header>
+	</header>
 	<nav class="menu" id="nav_menu">
-        {{#each routes}}
-            <a href="{{route}}" class="item-menu" id="nav_item_{{route}}">{{label}}</a>
-        {{/each}}
+		{{#each routes}}
+		<a href="{{route}}" class="item-menu" id="nav_item_{{route}}">{{label}}</a>
+		{{/each}}
 	</nav>
 
 	<!-- Search -->
-    <div class="search_dropdown_btn">
-        <button onclick="searchDestination()" class="dropbtn">Search for your Destination here!</button>
-        <div id="search_dropdown" class="search_dropdown-content">
-            <input type="text" placeholder="Search Here..." id="loc_input" onkeyup="filterDestination()">
-            {{#each locations}}
-                <a href="/nav/directions?end={{abbreviation}}" id="end_{{abbreviation}}" class="end_links">{{name}}</a>
-            {{/each}}
-        </div>
-    </div>
-    <div class="main-map" id="map_img_container">
+	<div class="search_dropdown_btn">
+		<button onclick="searchDestination()" class="dropbtn">Get your Destination!</button>
+		<div id="search_dropdown" class="search_dropdown-content">
+			<input type="text" placeholder="Ending location" id="loc_input" onkeyup="filterSearch()">
+			{{#each locations}}
+			<a href="/nav/directions?end={{abbreviation}}" id="end_{{abbreviation}}" class="end_links">{{name}}</a>
+			{{/each}}
+		</div>
 	</div>
-    <script src="/js/navigation.js"></script>
-    <script>
-        get_image_origin();
-        remove_start();
-        add_start_path();
-    </script>
+	<h3 id="start_title"></h3>
+	<div class="edit_buttons">
+		<button type="button" class="btn btn-dark" onclick="window.location.href='/nav'">Back</button>
+	</div>
+	<div class="main-map" id="map_img_container">
+	</div>
+	<script src="/js/navigation.js"></script>
+	<script>
+		get_image_origin();
+		remove_start();
+		add_start_path();
+	</script>
 
 </body>
 

@@ -1,44 +1,59 @@
 <html>
 
 <head>
-	<title>Add Shortcut</title>
 	<link rel="stylesheet" href="/css/bootstrap.css">
 	<link rel="stylesheet" href="/css/bootstrap-theme.css">
 	<link rel="stylesheet" href="/css/hamburger.css">
+	<link rel="stylesheet" href="/css/search.css">
 	<link rel="stylesheet" href="/css/layout.css">
 	<link rel="stylesheet" href="/css/report.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pattaya|Poppins:400,500&display=swap" rel="stylesheet" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Report</title>
 </head>
 
 <body>
 	<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 	<script src="/js/bootstrap.js"></script>
 	<script src="/js/hamburger.js"></script>
-	<script src="/js/report.js"></script>
+	<script src="/js/search.js"></script>
+	<script src="/js/navigation.js"></script>
+    <script src="/js/report.js"></script>
+    <script src="/js/undo.js"></script>
 
 	<!-- Top Navigation Menu -->
 	<header class="title">
 		<a href="/nav" style="text-decoration: none;">
-            <h1>SHORT WAYZE</h1>
-        </a>
+			<h1>Short Wayze</h1>
+		</a>
 		<div class="top">
 			<a class="menu_icon"><i class="fa fa-bars"></i></a>
 		</div>
 	</header>
-    <nav class="menu" id="nav_menu">
-        {{#each routes}}
-            <a href="{{route}}" class="item-menu" id="nav_item_{{route}}">{{label}}</a>
-        {{/each}}
-    </nav>
-    <div class="container">
+	<nav class="menu" id="nav_menu">
+		{{#each routes}}
+		<a href="{{route}}" class="item-menu" id="nav_item_{{route}}">{{label}}</a>
+		{{/each}}
+	</nav>
+	<div class="container">
+
+	<h1>Recent Reports</h1>
+	<p>Spotted a cop or construction site on campus? Report it here by sharing the location and time they were spotted! Also click to see what others have reported to make your navigation around campus less of a hassle. <p>
+
+        <!-- Undo Button -->
+        <div class="edit_buttons" id="undo_cntr">
+        </div>
+        <br>
 
     </div>
 
 	<!--Trigger-->
-	<a class="login-trigger" href="#" data-target="#login" data-toggle="modal">Report</a>
+	<a class="login-trigger" href="#" data-target="#login" data-toggle="modal">Add a Report!</a>
 
 	<label id="login" class="modal fade" role="dialog">
 		<label class="modal-dialog">
@@ -48,23 +63,24 @@
 					<button data-dismiss="modal" class="close">&times;</button>
 
 					<h2>Report the Cop/Construction</h2>
-                    <br>
-					<form id="addCop">
-                        <div class="form-group">
-                            <label for="cop_button">Cop</label>
-                            <input type="radio" value="cop" id="cop_button" name="type" checked>
-                            <label for="construction_button">Construction</label>
-                            <input type="radio" value="construction" id="construction_button" name="type">
-                        </div>
+					<br>
+                    <form id="addEvent" role="form" method="get" action="/add/report">
+						<div class="form-group">
+							<label for="cop_button">Cop</label>
+							<input type="radio" value="cop" id="cop_button" name="type" checked>
+							<label for="construction_button">Construction</label>
+							<input type="radio" value="construction" id="construction_button" name="type">
+						</div>
 						<div class="form-group">
 							<label for="location">Location:</label>
-							<input type="text" class="form-control" id="location" placeholder="Location" name="location">
+							<input type="text" class="form-control" id="location" placeholder="Location"
+								name="location">
 						</div>
 						<div class="form-group">
 							<label for="time">Time:</label>
-							<input type="text" class="form-control" id="time" placeholder="Time" name="time">
+							<input type="time" class="form-control" id="time" placeholder="10AM" name="time">
 						</div>
-						<input type="submit" id="submit-Btn" class="btn btn-default" value="Report">
+						<input type="submit" id="submit-Btn" class="report-button" value="Report" onclick="alert('Report added successfully!');">
 					</form>
 					</input>
 				</label>
@@ -72,28 +88,43 @@
 		</label>
 	</label>
 
-    <br>
-	<h1>Recent Reports</h1>
-    <div class="little-border"></div>
-    <h2>Cops</h2>
-	{{#each police}}
+	<br>
+
+<div class="tabinator">
+  <input class="tablinks" type="radio" id="tab1" name="tabs" onclick="openTab(event, 'content1')" checked>
+  <label for="tab1">Cops</label>
+  <input class="tablinks" type="radio" id="tab2" name="tabs" onclick="openTab(event, 'content2')">
+  <label for = "tab2">Construction</label>
+</div>
+
+<!-- Tab content -->
+<div id="content1" class="tabcontent">
+  <h3>Cop Locations</h3>
+  <div class="little-border"></div>
+  {{#each police}}
 	<div class="report">
-        <p id="location" style="font-weight: bold;">Location: {{location}} </p>
-        <p id="time">Time: {{time}}</p>
-        <div class="little-border"></div>
-    </div>
+		<p id="location" style="font-weight: bold;">Location: {{location}} </p>
+		<p id="time">Time: {{time}}</p>
+		<div class="little-border"></div>
+	</div>
 	{{/each}}
+</div>
 
-    <h2>Construction</h2>
-    {{#each construction}}
-        <div class="report">
-            <p id="location" style="font-weight: bold;">Location: {{location}} </p>
-            <p id="time">Time: {{time}}</p>
-            <div class="little-border"></div>
-        </div>
-    {{/each}}
+<div id="content2" class="tabcontent">
+  <h3>Construction Locations</h3>
+  <div class="little-border"></div>
+  {{#each construction}}
+	<div class="report">
+		<p id="location" style="font-weight: bold;">Location: {{location}} </p>
+		<p id="time">Time: {{time}}</p>
+		<div class="little-border"></div>
+	</div>
+	{{/each}}
+</div>
 
-    <script src="/js/navigation.js"></script>
+    <script>
+        add_undo();
+    </script>
 </body>
 
 </html>

@@ -29,7 +29,7 @@
   "locations": [
     {
       "name": "64 Degrees",
-      "abbreviation": "64",
+      "abbreviation": "SixtyFour",
       "longitude": 32.8747808,
       "latitude": -117.2425759
     },
@@ -75,6 +75,11 @@
       "label": "View/Add Building Plans"
     },
     {
+      "name": "help",
+      "route": "/help",
+      "label": "Need Help?"
+    },
+    {
       "name": "logout",
       "route": "/login",
       "label": "Sign Out"
@@ -83,21 +88,38 @@
   "police": [
     {
       "location": "Library Walk (Next to the Arcade)",
-      "time": "11AM"
+      "time": "11:03"
     },
     {
       "location": "Ridge Walk (Between Revelle and Muir)",
-      "time": "2PM"
+      "time": "17:30"
     }
   ],
   "construction": [
     {
       "location": "Muir Parking Lot : - (",
-      "time": "Forever and ever..."
+      "time": "15:20"
     },
     {
       "location": "Geisel 2nd floor",
-      "time": "12AM"
+      "time": "08:10"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does the building plan image I add have to be a URL?",
+      "answer": "Yes, currently we only accept URLs for building plans. One easy way to do this if you have an image to share not from the web is by uploading it to Google Drive, and sharing the link.",
+      "id": "question1"
+    },
+    {
+      "question": "Can I only report cops or construction on campus?",
+      "answer": "Yes, unfortunately we currently only support reporting these two features.",
+      "id": "question2"
+    },
+    {
+      "question": "I have a shortcut I'd like to share. How can I do this?",
+      "answer": "If you want your shortcut to show up as a suggestion, please email the devlopers at shortwayze@realemail.com and we will consider using it. We will reach out if we do. Thanks for your help.",
+      "id": "question3"
     }
   ]
 }

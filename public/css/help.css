@@ -1,0 +1,30 @@
+body {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+.help {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  font-size: 20px;
+  color: black;
+}
+
+h3 {
+  font-size: 16px;
+  color: rgb(98, 183, 211);
+}
+
+h1.faq {
+  font-size: 25px;
+  text-align: center;
+  text-emphasis: bold;
+}
+
+p {
+  margin-left: 20px;
+  font-size: 18px;
+  text-emphasis: bold;
+}

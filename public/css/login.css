@@ -1,9 +1,30 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+html,
 body {
-  background-color: #f3ebf6;
-  font-family: "Ubuntu", sans-serif;
+  overflow-x: hidden;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+.background-img {
+  background-image: url("../images/CSE_SixtyFour_map.png");
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no repeat;
+  background-position: center center;
+  filter: blur(1px);
 }
 
 .main {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
   background-color: #ffffff;
   width: 400px;
   height: 400px;
@@ -12,33 +33,32 @@ body {
   box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
 }
 
-.sign {
-  padding-top: 40px;
-  color: #8c55aa;
-  font-family: "Ubuntu", sans-serif;
+.intro_title {
+  font-family: "Lobster";
+  color: #a600ff;
   font-weight: bold;
-  font-size: 23px;
+  font-size: 35px;
   text-align: center;
+  margin-top: 20px;
 }
 
 .un {
   width: 76%;
-  color: rgb(38, 50, 56);
+  color: rgb(0, 0, 0);
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 1px;
-  background: rgba(136, 126, 126, 0.04);
+  background: rgba(255, 255, 255);
   padding: 10px 20px;
   border: none;
   border-radius: 20px;
   outline: none;
   box-sizing: border-box;
-  border: 2px solid rgba(0, 0, 0, 0.02);
+  border: 1px solid rgb(0, 0, 0);
   margin-bottom: 50px;
   margin-left: 46px;
   text-align: center;
   margin-bottom: 27px;
-  font-family: "Ubuntu", sans-serif;
 }
 
 form.form1 {
@@ -47,22 +67,21 @@ form.form1 {
 
 .pass {
   width: 76%;
-  color: rgb(38, 50, 56);
+  color: rgb(0, 0, 0);
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 1px;
-  background: rgba(136, 126, 126, 0.04);
+  background: rgb(255, 255, 255);
   padding: 10px 20px;
   border: none;
   border-radius: 20px;
   outline: none;
   box-sizing: border-box;
-  border: 2px solid rgba(0, 0, 0, 0.02);
+  border: 1px solid rgb(3, 3, 3);
   margin-bottom: 50px;
   margin-left: 46px;
   text-align: center;
   margin-bottom: 27px;
-  font-family: "Ubuntu", sans-serif;
 }
 
 .un:focus,
@@ -71,6 +90,7 @@ form.form1 {
 }
 
 .submit {
+  width: 76%;
   cursor: pointer;
   border-radius: 5em;
   color: #fff;
@@ -80,10 +100,11 @@ form.form1 {
   padding-right: 40px;
   padding-bottom: 10px;
   padding-top: 10px;
-  font-family: "Ubuntu", sans-serif;
-  margin-left: 35%;
-  font-size: 13px;
-  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  margin-top: 20px;
+  margin-left: 46px;
+  margin-right: 35%;
+  margin-bottom: 20px;
+  font-size: 18px;
 }
 
 .forgot {
@@ -98,8 +119,18 @@ a {
   text-decoration: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .main {
-    border-radius: 0px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    background-color: #ffffff;
+    width: 90vw;
+    height: 400px;
+    margin: 7em auto;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
   }
 }
