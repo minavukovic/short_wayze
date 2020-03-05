@@ -4,8 +4,11 @@ function searchDestination() {
   document.getElementById("search_dropdown").classList.toggle("show");
   if (window.location.pathname === '/add/building_plan_alt' ||
       window.location.pathname === '/add/building_plan') {
+    ga('create', 'UA-159859118-1', 'auto');
+    ga('require',  'GTM-WCS653R');
     ga('send', 'event', 'search', 'click');
   }
+  console.log(window.location.pathname)
 }
 
 function filterSearch() {
