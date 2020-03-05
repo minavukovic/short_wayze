@@ -23,6 +23,7 @@
 	<script src="/js/hamburger.js"></script>
 	<script src="/js/search.js"></script>
 	<script src="/js/undo.js"></script>
+	<!-- <script src="/js/build_plan.js"></script> -->
 
 	<!-- Top Navigation Menu -->
 	<header class="title">
@@ -38,6 +39,10 @@
 		<a href="{{route}}" class="item-menu" id="nav_item_{{route}}">{{label}}</a>
 		{{/each}}
 	</nav>
+
+	<h1>UCSD Building Plans</h1>
+	<p>Access the plans of buildings around campus. Add a new plan if you don't currently see it, or search through the already existing plans!<p>
+
 	<div class="building-plan">
 		{{#if building_plan_alt}}
 		<button type="button" class="add-button_alt" data-toggle="modal" data-target="#myModal">Add a building
@@ -96,7 +101,7 @@
 								<input type="text" class="form-control" id="planURL" placeholder="URL" name="planURL">
 							</div>
 
-							<input type="submit" id="submitBtn" class="submit-button" value="Submit"></input>
+							<input type="submit" id="submitBtn" class="submit-button" value="Submit" onclick="alert('Building plan added successfully!');"></input>
 						</form>
 						{{else}}
 						<form id="addBuildingPlan" role="form" method="get" action="/add/building_plan">
@@ -119,7 +124,7 @@
 								<input type="text" class="form-control" id="planURL" placeholder="URL" name="planURL">
 							</div>
 
-							<input type="submit" id="submitBtn" class="submit-button" value="Submit"></input>
+							<input type="submit" id="submitBtn" class="submit-button" value="Submit" onclick="alert('Building plan added successfully!');"></input>
 						</form>
 						{{/if}}
 
