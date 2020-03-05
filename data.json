@@ -1,6 +1,16 @@
 {
   "building_plans": [
     {
+      "name": "Biomedical Library, Floor 1",
+      "description": "Biomedical Library, Floor 1",
+      "imageURL": "http://libraries.ucsd.edu/bmcl/building/fp1.gif"
+    },
+    {
+      "name": "Biomedical Library, Floor 2",
+      "description": "Biomedical Library, Floor 2",
+      "imageURL": "http://libraries.ucsd.edu/bmcl/building/fp2.gif"
+    },
+    {
       "name": "CSE Building, Basement",
       "description": "Computer Science and Engineering Building, Basement",
       "imageURL": "https://cse.ucsd.edu/sites/cse.ucsd.edu/files/maps/CSE_EBU3_BASEMENT.jpg"
@@ -24,6 +34,36 @@
       "name": "CSE Building, Floor 4",
       "description": "Computer Science and Engineering Building, Floor 4",
       "imageURL": "https://cse.ucsd.edu/sites/cse.ucsd.edu/files/maps/CSE_LEVEL4.jpg"
+    },
+    {
+      "name": "Galbraith Hall, Floor 2",
+      "description": "Galbraith Hall, Floor 2",
+      "imageURL": "https://images.adsttc.com/media/images/5876/525a/e58e/cea3/7600/03a4/slideshow/4613_L2_OPTC.jpg"
+    },
+    {
+      "name": "Galbraith Hall, Floor 3",
+      "description": "Galbraith Hall, Floor 3",
+      "imageURL": "https://images.adsttc.com/media/images/5876/52e5/e58e/cea3/7600/03a5/slideshow/4613_L3_OPTC.jpg"
+    },
+    {
+      "name": "Geisel Library, Floor 1",
+      "description": "Geisel Library, Floor 1",
+      "imageURL": "https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/47577488_2406583099357851_9184417357789921280_o.png?_nc_cat=110&_nc_sid=8024bb&_nc_ohc=rNHrL8P2HzMAX-P3PLw&_nc_ht=scontent-lax3-1.xx&oh=72463f197d564bfb7ef673b20da09854&oe=5E833507"
+    },
+    {
+      "name": "Mandeville Hall",
+      "description": "Mandeville Hall",
+      "imageURL": "http://orarchitects.dreamhosters.com/wp-content/uploads/2012/07/UCSD-02.jpg"
+    },
+    {
+      "name": "Price Center, Floor 1",
+      "description": "Price Center, Floor 1",
+      "imageURL": "https://ucsdnews.ucsd.edu/archive/graphics/images/2008/05-08PriceCenterFloorPlanBIG.jpg"
+    },
+    {
+      "name": "Price Center, Floor 2",
+      "description": "Price Center, Floor 2",
+      "imageURL": "http://spaces.ucsd.edu/candlelight/wp-content/uploads/2014/10/Untitled1.png"
     }
   ],
   "locations": [
