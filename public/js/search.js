@@ -2,6 +2,10 @@
 toggle between hiding and showing the dropdown content */
 function searchDestination() {
   document.getElementById("search_dropdown").classList.toggle("show");
+  if (window.location.pathname === '/add/building_plan_alt' ||
+      window.location.pathname === '/add/building_plan') {
+    ga('send', 'event', 'search', 'click');
+  }
 }
 
 function filterSearch() {
