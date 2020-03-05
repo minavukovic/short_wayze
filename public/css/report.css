@@ -12,14 +12,14 @@ nav {
   display: block;
   width: 100%;
   height: 3px;
-  background: #f1cd8f;
+  background: #7a7dd2;
   margin: 20px auto;
 }
 
 /*Trigger Button*/
 .login-trigger {
   color: #fff;
-  background: #176881;
+  background: #233556;
   padding: 15px 30px;
   position: relative;
   display: flex;

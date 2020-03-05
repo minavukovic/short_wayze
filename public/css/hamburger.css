@@ -9,8 +9,7 @@ body {
 
 header {
   height: 70px;
-  background-color: #35444a;
-  border-bottom: 1px solid #494949;
+  background: linear-gradient(#a84dc5, #4f6ca9);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,7 +36,7 @@ header > .top a.menu_icon:hover i {
 nav.menu {
   width: 100%;
   min-height: calc(77vh - 121px);
-  background-color: #646c6f;
+  background-color: #1e2c4c;
   position: absolute;
   left: -100%;
   transition: 0.3s all;

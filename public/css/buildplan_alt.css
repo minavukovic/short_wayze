@@ -16,7 +16,7 @@ body {
 /* Dropdown Button */
 .drop-button {
   width: 180px;
-  background-color: rgb(124, 57, 124);
+  background-color: rgb(70, 15, 95);
   color: white;
   padding: 16px;
   align-self: center;
@@ -29,7 +29,7 @@ body {
 /* Add a building plan button */
 .add-button_alt {
   width: 180px;
-  background-color: #176881;
+  background-color: #233556;
   color: white;
   padding: 16px;
   align-self: center;
