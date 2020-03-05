@@ -35,7 +35,7 @@ header > .top a.menu_icon:hover i {
 }
 nav.menu {
   width: 100%;
-  min-height: calc(77vh - 121px);
+  min-height: calc(100vh - 70px);
   background-color: #1e2c4c;
   position: absolute;
   left: -100%;
@@ -68,7 +68,7 @@ footer {
 
 .menu_show {
   left: 0 !important;
-  z-index: 2;
+  z-index: 5;
 }
 
 @media screen and (max-width: 425px) {
