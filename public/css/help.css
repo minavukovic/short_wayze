@@ -28,4 +28,10 @@ p {
   margin-left: 20px;
   font-size: 18px;
   text-emphasis: bold;
+  text-align: center;
+}
+
+ol {
+  margin-left: 30px;
+  margin-right: 10px;
 }
