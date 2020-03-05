@@ -36,7 +36,6 @@
 	<script src="/js/hamburger.js"></script>
 	<script src="/js/search.js"></script>
 	<script src="/js/undo.js"></script>
-	<script src="/js/build_plan.js"></script>
 
 	<!-- <script src="/js/build_plan.js"></script> -->
 
@@ -55,32 +54,45 @@
 		{{/each}}
 	</nav>
 
-	<h1>UCSD Building Plans</h1>
-	<p>Access the plans of buildings around campus. Add a new plan if you don't currently see it, or search through the already existing plans!<p>
+	<h1 style="text-align: center !important;">UCSD Building Plans</h1>
+    {{#if building_plan_alt}}
+        <p style="text-align: center !important;">Access the plans of buildings around campus. Add a new plan if you don't currently see it, or search through the already existing plans!<p>
+    {{/if}}
 
 	<div class="building-plan">
 		{{#if building_plan_alt}}
-		<button type="button" class="add-button_alt" data-toggle="modal" data-target="#myModal" id="search_btn">Add a building
-			plan</button>
-		<!-- Search -->
+		    <!-- Search -->
+		    <div class="search_dropdown">
+			    <button onclick="searchDestination()" class="drop-button">Search for a building plan</button>
+			    <div id="search_dropdown" class="search_dropdown-content">
+				    <input type="text" placeholder="Search Here..." id="loc_input" onkeyup="filterSearch()">
+				    {{#each building_plans}}
+				    <a class="bplan-name" href="/find?plan={{name}}" class="end_links">{{name}}</a>
+				    {{/each}}
+			    </div>
+		    </div>
 
-		<div class="search_dropdown">
-			<button onclick="searchDestination()" class="drop-button">Search for a building plan</button>
-			<div id="search_dropdown" class="search_dropdown-content">
-				<input type="text" placeholder="Search Here..." id="loc_input" onkeyup="filterSearch()">
-				{{#each building_plans}}
-				<a class="bplan-name" href="/find?plan={{name}}" class="end_links">{{name}}</a>
-				{{/each}}
-			</div>
-		</div>
-
-		<!-- Undo Button -->
-		<div class="edit_buttons" id="undo_cntr">
-		</div>
+            <button type="button" class="add-button_alt" data-toggle="modal" data-target="#myModal" id="search_btn">Add a building
+                plan</button>
 		{{else}}
-		<button type="button" class="add-button" data-toggle="modal" data-target="#myModal">Add a building
-			plan</button>
+            <button type="button" class="add-button_orig" data-toggle="modal" data-target="#myModal">Add a building
+                plan</button>
+            <!-- Search -->
+            <div class="search_dropdown">
+                <button onclick="searchDestination()" class="drop-button_orig">Search for a building plan</button>
+                <div id="search_dropdown" class="search_dropdown-content">
+                    <input type="text" placeholder="Search Here..." id="loc_input" onkeyup="filterSearch()">
+                    {{#each building_plans}}
+                        <a class="bplan-name" href="/find?plan={{name}}" class="end_links">{{name}}</a>
+                    {{/each}}
+                </div>
+            </div>
 		{{/if}}
+
+        <br>
+        <!-- Undo Button -->
+        <div class="edit_buttons" id="undo_cntr">
+        </div>
 
 		<br>
 

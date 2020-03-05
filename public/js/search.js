@@ -3,7 +3,9 @@ toggle between hiding and showing the dropdown content */
 function searchDestination() {
   document.getElementById("search_dropdown").classList.toggle("show");
   if (window.location.pathname === '/add/building_plan_alt' ||
-      window.location.pathname === '/add/building_plan') {
+      window.location.pathname === '/add/building_plan' ||
+      window.location.pathname === '/add/building_plan/undo' ||
+      window.location.pathname === '/add/building_plan_alt/undo') {
     ga('create', 'UA-159859118-1', 'auto', {'optimize_id': 'GTM-WCS653R'});
     ga('require',  'GTM-WCS653R');
     ga('send', 'event', 'search', 'click');
