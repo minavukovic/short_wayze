@@ -48,12 +48,13 @@
 		<button type="button" class="add-button_alt" data-toggle="modal" data-target="#myModal">Add a building
 			plan</button>
 		<!-- Search -->
+
 		<div class="search_dropdown">
 			<button onclick="searchDestination()" class="drop-button">Search for a building plan</button>
 			<div id="search_dropdown" class="search_dropdown-content">
 				<input type="text" placeholder="Search Here..." id="loc_input" onkeyup="filterSearch()">
 				{{#each building_plans}}
-				<a href="/find?plan={{name}}" class="end_links">{{name}}</a>
+				<a class="bplan-name" href="/find?plan={{name}}" class="end_links">{{name}}</a>
 				{{/each}}
 			</div>
 		</div>

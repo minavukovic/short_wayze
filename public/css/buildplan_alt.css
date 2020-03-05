@@ -6,28 +6,39 @@ body {
   position: relative;
   display: inline-block;
   width: 100%;
+  width: 100%;
+  left: 50% !important;
+  right: auto !important;
+  text-align: center !important;
+  transform: translate(-50%, 0) !important;
 }
 
 /* Dropdown Button */
 .drop-button {
+  width: 180px;
   background-color: rgb(124, 57, 124);
   color: white;
   padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
   align-self: center;
-  width: 100%;
+  font-size: 17px;
+  border: none;
+  margin-top: 15px;
+  border-radius: 5px;
 }
 
 /* Add a building plan button */
 .add-button_alt {
-  width: 100%;
+  width: 180px;
   background-color: #176881;
   color: white;
   padding: 16px;
   align-self: center;
-  font-size: 16px;
+  font-size: 17px;
   border: none;
-  margin: 5px 0px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+.bplan-name {
+  text-align: start;
 }
