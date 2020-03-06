@@ -59,7 +59,11 @@
 }
 
 .giesel-hover,
-.sun-god-hover {
+.sun-god-hover,
+.bear-hover,
+.triton-hover,
+.star-hover,
+.sixtyfour-hover {
   background: rgba(0, 0, 0, 0.4);
   cursor: pointer;
   display: none;
@@ -71,13 +75,21 @@
   z-index: 10000;
 }
 .giesel-hover .helper,
-.sun-god-hover .helper {
+.sun-god-hover .helper,
+.bear-hover .helper,
+.triton-hover .helper,
+.star-hover .helper,
+.sixtyfour-hover .helper {
   display: inline-block;
   height: 100%;
   vertical-align: middle;
 }
 .giesel-hover > div,
-.sun-god-hover > div {
+.sun-god-hover > div,
+.bear-hover > div,
+.triton-hover > div,
+.star-hover > div,
+.sixtyfour-hover > div {
   background-color: #fff;
   box-shadow: 10px 10px 60px #555;
   display: inline-block;
@@ -91,7 +103,11 @@
   padding: 15px 5%;
 }
 .giesel-closeButton,
-.sun-god-closeButton {
+.sun-god-closeButton,
+.bear-closeButton,
+.triton-closeButton,
+.star-closeButton,
+.sixtyfour-closeButton {
   background-color: #fff;
   border: 3px solid #999;
   border-radius: 50px;
@@ -109,11 +125,19 @@
   text-align: center;
 }
 .giesel-closeButton:hover,
-.sun-god-closeButton:hover {
+.sun-god-closeButton:hover,
+.bear-closeButton:hover,
+.triton-closeButton:hover,
+.star-closeButton:hover,
+.sixtyfour-closeButton:hover {
   background-color: #ccc;
 }
 .giesel-popup,
-.sun-god-popup {
+.sun-god-popup,
+.bear-popup,
+.triton-popup,
+.star-popup,
+.sixtyfour-popup {
   cursor: pointer;
   font-size: 20px;
   margin: 20px;
