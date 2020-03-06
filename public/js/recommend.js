@@ -1,14 +1,20 @@
 $(document).ready(function() {
-  $(".giesel-popup").click(function() {
-    $(".giesel-hover").show();
+  $("#box1").click(function() {
+    $(".geisel-hover").show();
   });
-  $(".giesel-hover").click(function() {
-    $(".giesel-hover").hide();
+  $(".geisel-popup").click(function() {
+    $(".geisel-hover").show();
   });
-  $(".giesel-closeButton").click(function() {
-    $(".giesel-hover").hide();
+  $(".geisel-hover").click(function() {
+    $(".geisel-hover").hide();
+  });
+  $(".geisel-closeButton").click(function() {
+    $(".geisel-hover").hide();
   });
 
+  $("#box2").click(function() {
+    $(".sun-god-hover").show();
+  });
   $(".sun-god-popup").click(function() {
     $(".sun-god-hover").show();
   });
@@ -19,6 +25,9 @@ $(document).ready(function() {
     $(".sun-god-hover").hide();
   });
 
+  $("#box3").click(function() {
+    $(".bear-hover").show();
+  });
   $(".bear-popup").click(function() {
     $(".bear-hover").show();
   });
@@ -29,6 +38,9 @@ $(document).ready(function() {
     $(".bear-hover").hide();
   });
 
+  $("#box4").click(function() {
+    $(".triton-hover").show();
+  });
   $(".triton-popup").click(function() {
     $(".triton-hover").show();
   });
@@ -39,6 +51,9 @@ $(document).ready(function() {
     $(".triton-hover").hide();
   });
 
+  $("#box5").click(function() {
+    $(".star-hover").show();
+  });
   $(".star-popup").click(function() {
     $(".star-hover").show();
   });
@@ -49,6 +64,9 @@ $(document).ready(function() {
     $(".star-hover").hide();
   });
 
+  $("#box6").click(function() {
+    $(".sixtyfour-hover").show();
+  });
   $(".sixtyfour-popup").click(function() {
     $(".sixtyfour-hover").show();
   });

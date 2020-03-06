@@ -19,46 +19,46 @@
   font-size: 20px;
   color: white;
 }
-.box1 {
-  background-image: url("../images/Giesel\ Library.jpg");
+#box1 {
+  background-image: url("../images/Geisel\ Library.jpg");
   background-size: cover;
   background-repeat: no repeat;
   background-position: center center;
 }
 
-.box2 {
+#box2 {
   background-image: url("../images/Sun\ god.jpg");
   background-size: cover;
   background-repeat: no repeat;
   background-position: center center;
 }
-.box3 {
+#box3 {
   background-image: url("../images/Bear.jpg");
   background-size: cover;
   background-repeat: no repeat;
   background-position: center center;
 }
-.box4 {
+#box4 {
   background-image: url("../images/Triton\ Statue.jpg");
   background-size: cover;
   background-repeat: no repeat;
   background-position: center center;
 }
-.box5 {
+#box5 {
   background-image: url("../images/Fallen\ Star.jpg");
   background-size: cover;
   background-repeat: no repeat;
   background-position: center center;
 }
 
-.box6 {
+#box6 {
   background-image: url("../images/64-degree-sign.jpg");
   background-size: cover;
   background-repeat: no repeat;
   background-position: center center;
 }
 
-.giesel-hover,
+.geisel-hover,
 .sun-god-hover,
 .bear-hover,
 .triton-hover,
@@ -74,7 +74,7 @@
   width: 100%;
   z-index: 10000;
 }
-.giesel-hover .helper,
+.geisel-hover .helper,
 .sun-god-hover .helper,
 .bear-hover .helper,
 .triton-hover .helper,
@@ -84,7 +84,7 @@
   height: 100%;
   vertical-align: middle;
 }
-.giesel-hover > div,
+.geisel-hover > div,
 .sun-god-hover > div,
 .bear-hover > div,
 .triton-hover > div,
@@ -102,7 +102,7 @@
   border-radius: 8px;
   padding: 15px 5%;
 }
-.giesel-closeButton,
+.geisel-closeButton,
 .sun-god-closeButton,
 .bear-closeButton,
 .triton-closeButton,
@@ -124,7 +124,7 @@
   height: 30px;
   text-align: center;
 }
-.giesel-closeButton:hover,
+.geisel-closeButton:hover,
 .sun-god-closeButton:hover,
 .bear-closeButton:hover,
 .triton-closeButton:hover,
@@ -132,7 +132,7 @@
 .sixtyfour-closeButton:hover {
   background-color: #ccc;
 }
-.giesel-popup,
+.geisel-popup,
 .sun-god-popup,
 .bear-popup,
 .triton-popup,
