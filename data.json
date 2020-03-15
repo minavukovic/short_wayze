@@ -111,7 +111,7 @@
     },
     {
       "name": "building_plan",
-      "route": "/add/building_plan",
+      "route": "/add/building_plan_alt",
       "label": "View/Add Building Plans"
     },
     {
